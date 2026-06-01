@@ -3,11 +3,9 @@ import { company, directors } from '@/lib/company-data';
 
 const facts = [
   { label: 'Incorporated', value: company.incorporated },
-  { label: 'CIN', value: company.cin },
-  { label: 'Status', value: company.status },
   { label: 'Experience', value: `${company.yearsInBusiness} Years` },
-  { label: 'Registrar', value: company.registrar },
-  { label: 'Paid-up Capital', value: company.paidUpCapital },
+  { label: 'Workforce', value: '2000+ Personnel' },
+  { label: 'Presence', value: '6 States' },
 ];
 
 export function Corporate() {
@@ -54,9 +52,8 @@ export function Corporate() {
           ))}
         </div>
 
-        <p className="mt-8 font-mono text-[10px] text-honos-muted">
-          Last AGM: {company.lastAgm} · Last balance sheet: {company.lastBalanceSheet} ·{' '}
-          {company.nicCode}
+        <p className="mt-8 font-mono text-[10px] text-honos-muted uppercase tracking-widest text-center">
+          ISO 9001:2015 Certified · PSARA Certified · {company.nicCode}
         </p>
       </div>
     </section>

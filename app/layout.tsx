@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   title: `${company.legalName} | Security & Manpower Services Surat`,
   description: `${company.description} CIN ${company.cin}. Established ${company.incorporated}.`,
   keywords: [
-    'security services Gujarat',
+    'security services India',
     'security guard Surat',
     'manpower outsourcing',
     'housekeeping services',

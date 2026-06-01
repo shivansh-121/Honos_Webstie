@@ -19,7 +19,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'About | Honos Protection Services Pvt. Ltd.',
   description:
-    'Incorporated 2017 in Surat. CIN U74999GJ2017PTC095095. Security & manpower services across Gujarat — company profile, directors, compliance, and training.',
+    'Incorporated 2017 in Surat. CIN U74999GJ2017PTC095095. Security & manpower services across India — company profile, directors, compliance, and training.',
 };
 
 export default function AboutPage() {

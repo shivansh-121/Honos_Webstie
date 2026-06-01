@@ -33,9 +33,9 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="mb-6 font-display text-[clamp(3.5rem,8vw,6rem)] uppercase leading-[0.9] tracking-tight text-[#111827] font-bold"
+              className="mb-6 font-display text-[clamp(3rem,6vw,5.5rem)] uppercase leading-[0.9] tracking-tight text-[#111827] font-bold"
             >
-              TOTAL <span className="text-brand-navy">PROTECTION.</span><br/>
+              TOTAL <span className="text-brand-navy">MANPOWER.</span><br/>
               UNMATCHED <span className="text-[#cc0000]">TRUST.</span>
             </motion.h1>
 
@@ -60,7 +60,7 @@ export function Hero() {
           </div>
 
           {/* Right Image Area (Spans 5 columns) */}
-          <div className="relative lg:col-span-5 hidden lg:block">
+          <div className="relative lg:col-span-5 mt-16 lg:mt-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, x: 20 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -89,8 +89,8 @@ export function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-display text-2xl font-bold text-brand-navy leading-none mb-1">100%</p>
-                  <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600">PSARA Compliant</p>
+                  <p className="font-display text-2xl font-bold text-brand-navy leading-none mb-1">2000+</p>
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600">Strong Workforce</p>
                 </div>
               </div>
             </motion.div>
@@ -107,8 +107,8 @@ export function Hero() {
                   {company.yearsInBusiness}+
                 </div>
                 <div>
-                  <p className="font-display text-xl font-bold text-brand-navy leading-none mb-1">Years of Trust</p>
-                  <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600">Serving Gujarat</p>
+                  <p className="font-display text-xl font-bold text-brand-navy leading-none mb-1">Across 6 States</p>
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600">Pan-India Presence</p>
                 </div>
               </div>
             </motion.div>

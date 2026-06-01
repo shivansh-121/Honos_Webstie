@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Services | Honos Protection Services Pvt. Ltd.',
   description:
-    'Security Supervisor, Security Guard, Lady Guard, Gunman, Housekeeping, Manpower Outsourcing, Event Security, and Bouncer / Bodyguard services in Gujarat.',
+    'Security Supervisor, Security Guard, Lady Guard, Gunman, Housekeeping, Manpower Outsourcing, Event Security, and Bouncer / Bodyguard services in India.',
 };
 
 export default function ServicesPage() {
@@ -22,7 +22,7 @@ export default function ServicesPage() {
           <p className="mb-16 max-w-3xl font-body text-xl text-honos-muted">
             Honos Protection Services Pvt. Ltd. delivers trained personnel for
             industrial, commercial, residential, and government establishments
-            across Gujarat.
+            across India.
           </p>
           <div className="section-divider mb-16" />
 

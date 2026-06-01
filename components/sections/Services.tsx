@@ -47,7 +47,7 @@ export function Services() {
         </h2>
         <p className="mb-16 max-w-2xl font-body text-lg text-honos-muted">
           Professional security and manpower solutions for industrial, commercial,
-          residential, and government establishments across Gujarat.
+          residential, and government establishments across India.
         </p>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">

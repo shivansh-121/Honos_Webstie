@@ -51,7 +51,7 @@ export function About() {
               id="about-heading"
               className="mb-8 font-display text-[clamp(2rem,5vw,3.5rem)] uppercase leading-tight tracking-wider text-honos-white"
             >
-              Leading Security & Manpower in Gujarat
+              Leading Security & Manpower in India
             </h2>
             <p className="font-body text-xl leading-relaxed text-honos-muted">
               {company.description}
@@ -63,7 +63,8 @@ export function About() {
               {company.sectors}
             </p>
           </div>
-          <div className="hidden lg:block flex-1 relative h-[60vh] w-full rounded-2xl overflow-hidden border-2 border-gold/30 shadow-[0_0_60px_rgba(201,168,76,0.25)] bg-gradient-to-tr from-obsidian via-brand-red/20 to-gold/20 p-4">
+          
+          <div className="flex-1 relative h-[40vh] lg:h-[60vh] w-full max-w-lg rounded-2xl overflow-hidden border-2 border-gold/30 shadow-[0_0_60px_rgba(201,168,76,0.25)] bg-gradient-to-tr from-obsidian via-brand-red/20 to-gold/20 p-4 mt-12 lg:mt-0">
             <div className="absolute inset-0 bg-void/40 backdrop-blur-3xl" />
             
             <img 

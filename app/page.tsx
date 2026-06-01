@@ -8,7 +8,6 @@ import { Statement } from '@/components/sections/Statement';
 import { Process } from '@/components/sections/Process';
 import { Industries } from '@/components/sections/Industries';
 import { Commitment } from '@/components/sections/Commitment';
-import { Rates } from '@/components/sections/Rates';
 import { Contact } from '@/components/sections/Contact';
 
 export default function HomePage() {
@@ -23,7 +22,6 @@ export default function HomePage() {
       <Process />
       <Industries />
       <Commitment />
-      <Rates />
       <Contact />
     </PageShell>
   );

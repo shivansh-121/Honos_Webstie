@@ -70,11 +70,11 @@ export const company = {
   taglineBrochure: 'Reliable, disciplined, and efficient security solutions',
   location: 'Surat, Gujarat 395010',
   description:
-    'Honos Protection Services Pvt. Ltd. is a leading security and manpower service provider based in Gujarat. We specialize in delivering trained personnel for industrial, commercial, residential, and government establishments.',
+    'Honos Protection Services Pvt. Ltd. is a leading total manpower solution provider. We specialize in delivering integrated security, housekeeping, facility management, and trained personnel for industrial, commercial, residential, and government establishments.',
   presence:
-    'We have a strong presence across Gujarat and are trusted by reputed organizations for our professionalism and service quality.',
+    'We have a strong presence across 6 states in India and are trusted by reputed organizations for our professionalism and service quality.',
   sectors:
-    'With strong experience across government and private sectors, we ensure safety, vigilance, and professionalism at all levels.',
+    'With strong experience across government and private sectors, we ensure safety, vigilance, and professionalism at all levels. Our 2000+ strong workforce stands ready to serve.',
   verified: true,
 };
 
@@ -94,13 +94,13 @@ export const directors = [
 ];
 
 export const whyChooseUs = [
+  'ISO 9001:2015 & PSARA Certified',
+  'Presence in 6 states across India',
+  '2000+ strong verified workforce',
   '24/7 supervision with regular field officer visits',
-  'Trained and verified security personnel',
+  'Total manpower solutions: Security, Housekeeping & Facility Management',
   'Experience with Government & Corporate clients',
-  'Strong communication and reporting system',
   'Quick replacement of guards within 24 hours',
-  'Focus on discipline, punctuality, and professionalism',
-  '9+ years serving Gujarat with verified premium service',
 ];
 
 export const services = [

@@ -56,7 +56,7 @@ export function Industries() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <SectionLabel className="mb-4 justify-center">Industries We Serve</SectionLabel>
           <h2 className="mb-6 font-display text-5xl uppercase tracking-wider text-honos-white md:text-6xl font-bold">
-            Trusted Across Gujarat
+            Trusted Across India
           </h2>
           <p className="font-body text-xl text-honos-muted">
             We provide reliable security solutions across major sectors, partnering with leading organizations and government bodies.
