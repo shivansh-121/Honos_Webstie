@@ -33,30 +33,29 @@ export function BackToTop() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.button
-          initial={{ opacity: 0, y: 20, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.9 }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
-          onClick={scrollToTop}
-          className="group fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center border border-brand-red/50 bg-obsidian/80 backdrop-blur-md transition-all duration-300 hover:border-gold hover:bg-obsidian lg:bottom-10 lg:right-10"
-          aria-label="Back to top"
-        >
-          <div className="absolute inset-0 bg-brand-red/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="square"
-            strokeLinejoin="miter"
-            className="text-honos-white transition-colors duration-300 group-hover:text-gold"
+          <motion.button
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            onClick={scrollToTop}
+            className="group fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-brand-red text-honos-white shadow-[0_4px_20px_rgba(227,30,36,0.4)] transition-all duration-300 hover:scale-110 hover:bg-gold hover:shadow-[0_4px_20px_rgba(201,168,76,0.4)] lg:bottom-10 lg:right-10"
+            aria-label="Back to top"
           >
-            <path d="M12 19V5M5 12l7-7 7 7" />
-          </svg>
-        </motion.button>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="transition-transform duration-300 group-hover:-translate-y-1"
+            >
+              <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+          </motion.button>
       )}
     </AnimatePresence>
   );
