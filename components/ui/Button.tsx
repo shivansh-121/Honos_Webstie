@@ -4,7 +4,7 @@ import { type ReactNode } from 'react';
 type ButtonProps = {
   href?: string;
   children: ReactNode;
-  variant?: 'outline' | 'filled';
+  variant?: 'outline' | 'filled' | 'primary' | 'white';
   className?: string;
   onClick?: () => void;
   type?: 'button' | 'submit';
@@ -19,14 +19,20 @@ export function Button({
   type = 'button',
 }: ButtonProps) {
   const base =
-    'inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 font-mono text-xs uppercase tracking-widest transition-colors duration-300';
+    'inline-flex items-center justify-center w-full sm:w-auto px-10 py-4 font-display text-lg uppercase tracking-widest transition-colors duration-300 font-bold shadow-md';
 
-  const styles =
-    variant === 'outline'
-      ? `btn-gold-outline border ${className}`
-      : `bg-brand-red text-white hover:bg-brand-navy hover:scale-[1.02] ${className} ${base}`;
+  let styles = '';
+  if (variant === 'outline') {
+    styles = `btn-gold-outline border ${className}`;
+  } else if (variant === 'filled') {
+    styles = `bg-brand-red text-white hover:bg-brand-navy hover:scale-[1.02] ${className}`;
+  } else if (variant === 'primary') {
+    styles = `bg-[#cc0000] text-white hover:bg-red-800 ${className}`;
+  } else if (variant === 'white') {
+    styles = `bg-white text-black hover:bg-gray-200 ${className}`;
+  }
 
-  const combined = variant === 'outline' ? `${base} ${styles}` : styles;
+  const combined = `${base} ${styles}`;
 
   if (href) {
     return (
