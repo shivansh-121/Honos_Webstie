@@ -187,6 +187,46 @@ export const services = [
       'Available for short-term and long-term deployment',
     ],
   },
+  {
+    num: '09',
+    title: 'Facility Management',
+    points: [
+      'Comprehensive facility upkeep',
+      'Vendor coordination',
+      'Routine maintenance operations',
+      'Energy management and conservation',
+    ],
+  },
+  {
+    num: '10',
+    title: 'Specialized Corporate Security',
+    points: [
+      'Executive protection',
+      'Risk assessment & consulting',
+      'Corporate intelligence',
+      'Loss prevention strategies',
+    ],
+  },
+  {
+    num: '11',
+    title: 'Technical & Maintenance Staff',
+    points: [
+      'Electricians and plumbers',
+      'HVAC technicians',
+      'General maintenance personnel',
+      'Equipment operation staff',
+    ],
+  },
+  {
+    num: '12',
+    title: 'Cash Management Services',
+    points: [
+      'Secure cash transit',
+      'ATM replenishment & monitoring',
+      'Cash vault security',
+      'Highly trained armed escorts',
+    ],
+  },
 ];
 
 export const training = {
