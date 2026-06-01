@@ -42,12 +42,9 @@ export function Hero() {
           <div className="relative z-10 hidden lg:block">
             <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-obsidian">
               <img 
-                src="/images/bouncers_team.png" 
-                alt="Security Guards" 
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop" 
+                alt="Corporate Security" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://images.unsplash.com/photo-1542614945-8473dc16a3a7?q=80&w=2000&auto=format&fit=crop';
-                }}
               />
             </div>
           </div>

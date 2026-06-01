@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import {
   Bebas_Neue,
-  Cormorant_Garamond,
+  Inter,
   IBM_Plex_Mono,
 } from 'next/font/google';
 import './globals.css';
@@ -20,11 +20,9 @@ const bebas = Bebas_Neue({
   display: 'swap',
 });
 
-const cormorant = Cormorant_Garamond({
-  weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-cormorant',
+  variable: '--font-cormorant', // keep variable name so we don't have to change tailwind and globals
   display: 'swap',
 });
 
@@ -56,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bebas.variable} ${cormorant.variable} ${fragment.variable}`}
+      className={`${bebas.variable} ${inter.variable} ${fragment.variable}`}
       suppressHydrationWarning
     >
       <body>
