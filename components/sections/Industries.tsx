@@ -42,13 +42,13 @@ export function Industries() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24 border-b border-honos-line/30 pb-16">
           <div className="text-center">
             <h3 className="text-5xl md:text-7xl font-display font-bold text-brand-red mb-3">
-              <Counter end={totalClients} suffix="+" />
+              <Counter end={104} suffix="+" />
             </h3>
             <p className="font-mono text-sm md:text-base uppercase tracking-widest text-honos-muted font-semibold">Trusted Clients</p>
           </div>
           <div className="text-center">
             <h3 className="text-5xl md:text-7xl font-display font-bold text-brand-red mb-3">
-              <Counter end={industryCategories.length} />
+              <Counter end={22} suffix="+" />
             </h3>
             <p className="font-mono text-sm md:text-base uppercase tracking-widest text-honos-muted font-semibold">Sectors Served</p>
           </div>
@@ -72,7 +72,7 @@ export function Industries() {
             Trusted Across India
           </h2>
           <p className="font-body text-xl text-honos-muted">
-            We provide reliable, premium security and manpower solutions across {industryCategories.length} major sectors, partnering with leading organizations and government bodies nationwide.
+            We provide reliable, premium security and manpower solutions across 22+ major sectors, partnering with leading organizations and government bodies nationwide.
           </p>
         </div>
 
