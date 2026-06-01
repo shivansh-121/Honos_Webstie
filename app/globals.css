@@ -3,30 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --color-void: #050507;
-  --color-obsidian: #0a0a0f;
-  --color-steel: #1c1c28;
-  --color-gold: #c9a84c;
-  --color-gold-bright: #e8c96a;
-  --color-brand-navy: #1b365d;
-  --color-brand-red: #e31e24;
-  --color-white: #f2f0ec;
-  --color-muted: #6b6b7a;
-  --color-line: #1e1e2e;
+  /* Clean Light Theme Default */
+  --color-void: #f9f9fb;      /* Main Background */
+  --color-obsidian: #ffffff;  /* Card Background */
+  --color-steel: #e2e2e8;     /* Borders / Muted Bgs */
+  --color-gold: #c9a84c;      /* Accent */
+  --color-gold-bright: #b08d3a;
+  --color-brand-navy: #1b365d; /* Primary Dark Blue */
+  --color-brand-red: #e31e24;  /* Primary Red */
+  --color-white: #111827;     /* Main Text Color (Dark Gray) */
+  --color-muted: #4b5563;     /* Muted Text */
+  --color-line: #d1d5db;      /* Divider Lines */
 }
 
-[data-theme="light"] {
-  --color-void: #f9f9fb;
-  --color-obsidian: #f0f0f4;
-  --color-steel: #e2e2e8;
-  --color-gold: #c9a84c;
-  --color-gold-bright: #b08d3a;
-  --color-brand-navy: #1b365d;
-  --color-brand-red: #e31e24;
-  --color-white: #111827;
-  --color-muted: #4b5563;
-  --color-line: #d1d5db;
-}
+/* Remove dark/light toggle logic since we are committing to light corporate theme */
 
 * {
   box-sizing: border-box;
@@ -70,13 +60,7 @@ body {
 }
 
 body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9998;
-  /* Clean subtle gradient instead of noise */
-  background: radial-gradient(circle at 50% 0%, rgba(27, 54, 93, 0.03) 0%, transparent 70%);
+  display: none;
 }
 
 ::selection {
@@ -173,36 +157,9 @@ body::after {
   );
 }
 
-/* Professional Guard Company Aesthetic */
+/* Professional Clean Styles */
 .security-backdrop {
   background-color: var(--color-void);
-  --bg-glow: rgba(27, 54, 93, 0.4);
-}
-
-[data-theme="light"] .security-backdrop {
-  --bg-glow: rgba(227, 30, 36, 0.05);
-}
-
-.security-backdrop--hero {
-  background-image: radial-gradient(ellipse 100% 50% at 50% 0%, var(--bg-glow) 0%, transparent 80%);
-}
-
-.security-backdrop--hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(27, 54, 93, 0.05) 0%, transparent 100%);
-}
-
-.security-backdrop--section {
-  background-image: radial-gradient(ellipse at center, rgba(27, 54, 93, 0.1) 0%, transparent 70%);
-  opacity: 0.8;
-}
-
-.hero-stat-card {
-  position: relative;
-  overflow: hidden;
-  border-top: 2px solid var(--color-brand-red);
 }
 
 .will-animate {

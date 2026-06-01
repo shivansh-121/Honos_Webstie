@@ -1,69 +1,36 @@
-'use client';
-
-import { useState } from 'react';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { industryCategories } from '@/lib/company-data';
 
 export function Industries() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const active = industryCategories[activeIndex];
-
   return (
-    <section id="industries" className="bg-void py-24 lg:py-32">
+    <section id="industries" className="bg-steel/30 py-24 lg:py-32">
       <div className="mx-auto max-w-container px-6 lg:px-10">
-        <SectionLabel className="mb-4">Industries We Serve</SectionLabel>
-        <h2 className="mb-4 font-display text-5xl uppercase tracking-wider text-honos-white md:text-7xl">
-          Trusted Across Gujarat
-        </h2>
-        <p className="mb-12 max-w-2xl font-body text-lg text-honos-muted">
-          Reputed organizations across cinema, malls, corporate offices, residential,
-          construction, diamond & jewellery, hotels, institutional, factory, hospital,
-          public infrastructure, and government sectors.
-        </p>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <SectionLabel className="mb-4 justify-center">Industries We Serve</SectionLabel>
+          <h2 className="mb-6 font-display text-5xl uppercase tracking-wider text-honos-white md:text-6xl">
+            Trusted Across Gujarat
+          </h2>
+          <p className="font-body text-xl text-honos-muted">
+            We provide reliable security solutions across various sectors including cinema, corporate offices, residential, hospitality, and government.
+          </p>
+        </div>
 
-        <div className="flex flex-col gap-8 lg:flex-row">
-          <div
-            className="flex flex-wrap gap-2 lg:w-80 lg:flex-col"
-            role="tablist"
-            aria-label="Industry categories"
-          >
-            {industryCategories.map((cat, i) => (
-              <button
-                key={cat.name}
-                type="button"
-                role="tab"
-                aria-selected={i === activeIndex}
-                onClick={() => setActiveIndex(i)}
-                className={`border px-4 py-3 text-left font-mono text-[10px] uppercase tracking-widest transition-colors ${
-                  i === activeIndex
-                    ? 'border-gold bg-gold/10 text-gold'
-                    : 'border-honos-line text-honos-muted hover:border-gold/50'
-                }`}
-                data-cursor="link"
-              >
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {industryCategories.map((cat) => (
+            <div key={cat.name} className="border border-honos-line bg-obsidian p-6 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="mb-4 font-display text-xl uppercase text-brand-navy border-b border-honos-line pb-3">
                 {cat.name}
-              </button>
-            ))}
-          </div>
-
-          <div
-            className="flex-1 border border-honos-line bg-obsidian p-8"
-            role="tabpanel"
-          >
-            <h3 className="mb-6 font-display text-2xl uppercase text-gold">
-              {active.name}
-            </h3>
-              <ul className="grid gap-2 sm:grid-cols-2">
-                {active.clients.slice(0, 5).map((client) => (
-                  <li
-                    key={client}
-                    className="font-body text-base text-honos-white"
-                  >
+              </h3>
+              <ul className="space-y-3">
+                {cat.clients.slice(0, 3).map((client) => (
+                  <li key={client} className="flex items-start gap-3 font-body text-[15px] leading-tight text-honos-white">
+                    <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-red" />
                     {client}
                   </li>
                 ))}
               </ul>
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

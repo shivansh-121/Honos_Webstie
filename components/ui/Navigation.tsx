@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { contact } from '@/lib/company-data';
 import { NavBrand } from '@/components/ui/NavBrand';
-import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 const links = [
   { href: '/services', label: 'Services' },
@@ -73,13 +72,9 @@ export function Navigation() {
                 </Link>
               </li>
             ))}
-            <li>
-              <ThemeToggle />
-            </li>
           </ul>
 
           <div className="ml-auto flex items-center gap-4 md:hidden">
-            <ThemeToggle />
             <button
               type="button"
               className="relative z-[60] flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-1.5"
