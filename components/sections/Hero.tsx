@@ -1,3 +1,5 @@
+'use client';
+
 import { company } from '@/lib/company-data';
 import { Button } from '@/components/ui/Button';
 import { SectionLabel } from '@/components/ui/SectionLabel';
