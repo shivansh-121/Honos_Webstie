@@ -1,0 +1,333 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-void: #050507;
+  --color-obsidian: #0a0a0f;
+  --color-steel: #1c1c28;
+  --color-gold: #c9a84c;
+  --color-gold-bright: #e8c96a;
+  --color-brand-navy: #1b365d;
+  --color-brand-red: #e31e24;
+  --color-white: #f2f0ec;
+  --color-muted: #6b6b7a;
+  --color-line: #1e1e2e;
+}
+
+[data-theme="light"] {
+  --color-void: #f9f9fb;
+  --color-obsidian: #f0f0f4;
+  --color-steel: #e2e2e8;
+  --color-gold: #c9a84c;
+  --color-gold-bright: #b08d3a;
+  --color-brand-navy: #1b365d;
+  --color-brand-red: #e31e24;
+  --color-white: #111827;
+  --color-muted: #4b5563;
+  --color-line: #d1d5db;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-white);
+  font-family: var(--font-cormorant), serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+@media (max-width: 767px) {
+  body {
+    cursor: auto;
+  }
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.04;
+  background-image: url('/textures/noise.svg');
+  background-repeat: repeat;
+}
+
+::selection {
+  background: rgba(201, 168, 76, 0.35);
+  color: var(--color-white);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+
+@keyframes bounce-chevron {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-bounce-chevron {
+  animation: bounce-chevron 2s ease-in-out infinite;
+}
+
+@keyframes pulse-ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ripple {
+  animation: pulse-ripple 2s ease-out infinite;
+}
+
+.btn-gold-outline {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-color: var(--color-brand-red) !important;
+  color: var(--color-white) !important;
+}
+
+.btn-gold-outline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-brand-red);
+  transform: translateX(-101%);
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+}
+
+@media (hover: hover) {
+  .btn-gold-outline:hover::before {
+    transform: translateX(0);
+  }
+
+  .btn-gold-outline:hover {
+    color: var(--color-white) !important;
+    border-color: var(--color-brand-red) !important;
+  }
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-brand-red) 15%,
+    var(--color-gold) 50%,
+    var(--color-brand-red) 85%,
+    transparent
+  );
+}
+
+/* Tactical grid — security operations aesthetic (not starfield) */
+.security-backdrop {
+  background-color: var(--color-void);
+  --grid-primary: rgba(27, 54, 93, 0.22);
+  --grid-secondary: rgba(27, 54, 93, 0.12);
+  --grid-glow: rgba(227, 30, 36, 0.07);
+}
+
+[data-theme="light"] .security-backdrop {
+  --grid-primary: rgba(227, 30, 36, 0.08); /* Warm red tint */
+  --grid-secondary: rgba(27, 54, 93, 0.08); /* Crisp navy lines */
+  --grid-glow: rgba(201, 168, 76, 0.15); /* Golden glow in the center */
+}
+
+.security-backdrop--hero {
+  background-image:
+    linear-gradient(180deg, var(--grid-primary) 0%, transparent 35%),
+    linear-gradient(var(--grid-secondary) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-secondary) 1px, transparent 1px),
+    radial-gradient(ellipse 80% 50% at 50% 100%, var(--grid-glow) 0%, transparent 55%);
+  background-size:
+    100% 100%,
+    56px 56px,
+    56px 56px,
+    100% 100%;
+}
+
+.security-backdrop--hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -12deg,
+    transparent,
+    transparent 80px,
+    rgba(201, 168, 76, 0.03) 80px,
+    rgba(201, 168, 76, 0.03) 81px
+  );
+  mask-image: linear-gradient(180deg, black 20%, transparent 85%);
+}
+
+.security-backdrop--section {
+  background-image:
+    linear-gradient(var(--grid-secondary) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-secondary) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.9;
+}
+
+/* Hero HUD corners */
+.hero-hud {
+  position: absolute;
+  z-index: 5;
+  padding: 1rem 1.25rem;
+  border-color: rgba(227, 30, 36, 0.35);
+  pointer-events: none;
+}
+
+.hero-hud--tl {
+  top: 5.5rem;
+  left: 1.5rem;
+  border-left: 1px solid;
+  border-top: 1px solid;
+}
+
+.hero-hud--tr {
+  top: 5.5rem;
+  right: 1.5rem;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  text-align: right;
+}
+
+.hero-hud--bl {
+  bottom: 5rem;
+  left: 1.5rem;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.hero-hud--br {
+  bottom: 5rem;
+  right: 1.5rem;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  text-align: right;
+}
+
+.hero-stat-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand-red), transparent);
+}
+
+.hero-panel-scan {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-panel-scan::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(227, 30, 36, 0.5),
+    transparent
+  );
+  animation: hero-scan 4s ease-in-out infinite;
+}
+
+@keyframes hero-scan {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.will-animate {
+  will-change: transform, opacity;
+}
+
+.preloader-h text {
+  animation: drawH 1.2s ease forwards 0.2s;
+}
+
+@keyframes drawH {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
