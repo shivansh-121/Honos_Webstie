@@ -24,7 +24,7 @@ export function Footer() {
             </p>
           </div>
 
-          <ContactDetails variant="compact" className="lg:col-span-1" />
+          <ContactDetails className="lg:col-span-1" />
 
           <nav aria-label="Footer navigation" className="lg:text-right">
             <ul className="flex flex-wrap gap-6 lg:justify-end">

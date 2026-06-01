@@ -4,7 +4,6 @@ import { useState, FormEvent } from 'react';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { Button } from '@/components/ui/Button';
 import { ContactDetails } from '@/components/ui/ContactDetails';
-import { SecurityBackdrop } from '@/components/ui/SecurityBackdrop';
 import { enquiryTypes, contact } from '@/lib/company-data';
 
 export function Contact() {
@@ -63,50 +62,23 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden py-32"
+      className="relative flex min-h-screen flex-col justify-center overflow-hidden py-32 bg-[#f9f9fb]"
     >
-      <div className="absolute inset-0">
-        <SecurityBackdrop variant="section" />
-      </div>
+      {/* Background Dots */}
+      <div 
+        className="absolute inset-0 z-0 opacity-[0.03]" 
+        style={{ backgroundImage: 'radial-gradient(#1b365d 2px, transparent 2px)', backgroundSize: '40px 40px' }}
+      ></div>
 
       <div className="relative z-10 mx-auto w-full max-w-container px-6 lg:px-10">
-        <SectionLabel className="mb-6">Contact</SectionLabel>
-        <h2 className="font-display text-[clamp(3rem,10vw,6.25rem)] uppercase leading-none tracking-wider text-honos-white">
-          Get In
-          <br />
-          Touch.
-        </h2>
-        <p className="mt-6 max-w-lg font-body text-lg text-honos-muted">
-          For any queries or clarification, please feel free to contact us. We
-          look forward to building a long-term association with your organization.
-        </p>
-
-        <div className="mt-8 flex flex-wrap gap-4">
-          <a
-            href={`https://wa.me/${contact.phoneTel.replace('+', '')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center border border-brand-red bg-brand-red/10 px-6 py-3 font-mono text-xs uppercase tracking-widest text-brand-red transition-colors hover:bg-brand-red hover:text-white"
-            data-cursor="link"
-          >
-            WhatsApp Enquiry
-          </a>
-          <a
-            href={contact.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center border border-honos-line px-6 py-3 font-mono text-xs uppercase tracking-widest text-honos-muted transition-colors hover:border-gold hover:text-gold"
-            data-cursor="link"
-          >
-            honossecurities.com
-          </a>
-        </div>
-
-        <div className="mt-12 grid gap-16 lg:grid-cols-2 lg:gap-20">
+        
+        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24 items-start">
+          
+          {/* Left Column: Address and Map */}
           <div>
-            <ContactDetails variant="full" />
+            <ContactDetails />
             <div
-              className="mt-10 overflow-hidden border border-honos-line group relative cursor-pointer"
+              className="mt-14 overflow-hidden border border-gray-200 shadow-lg group relative cursor-pointer rounded-2xl"
               onClick={() => {
                 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
                 const url = isIOS ? contact.appleMapUrl : contact.mapsUrl;
@@ -115,16 +87,10 @@ export function Contact() {
               title="Click to open in Maps"
               role="link"
               tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-                  window.open(isIOS ? contact.appleMapUrl : contact.mapsUrl, '_blank', 'noopener,noreferrer');
-                }
-              }}
             >
               {/* Clickable overlay */}
               <div className="absolute inset-0 z-10 flex flex-col items-start justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-black/70 to-transparent pointer-events-none">
-                <span className="flex items-center gap-2 bg-gold text-obsidian px-4 py-2 font-mono text-[11px] uppercase tracking-widest font-bold">
+                <span className="flex items-center gap-2 bg-[#cc0000] text-white px-4 py-2 font-mono text-[11px] uppercase tracking-widest font-bold rounded-lg shadow-md">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                   Open in Maps ↗
                 </span>
@@ -132,17 +98,23 @@ export function Contact() {
               <iframe
                 title="Honos Protection Services location on Google Maps"
                 src={contact.mapsEmbedUrl}
-                className="h-64 w-full grayscale contrast-125 lg:h-80 pointer-events-none"
+                className="h-[350px] w-full grayscale contrast-125 pointer-events-none"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
           </div>
 
-          <div>
+          {/* Right Column: Heading and Form */}
+          <div className="bg-white border border-gray-200 p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-3xl">
+            <SectionLabel className="mb-4">Send an Enquiry</SectionLabel>
+            <h2 className="mb-10 font-display text-[clamp(2.5rem,5vw,4rem)] uppercase leading-[0.9] tracking-tight text-[#111827] font-bold">
+              Get In Touch.
+            </h2>
+            
             {submitted ? (
-              <p className="font-mono text-sm uppercase tracking-widest text-gold">
-                Thank you. We will respond to your enquiry at the earliest.
+              <p className="font-mono text-sm uppercase tracking-widest text-green-700 font-bold p-6 border border-green-500/20 bg-green-500/10 rounded-xl">
+                ✓ Thank you. We will respond to your enquiry at the earliest.
               </p>
             ) : (
               <form
@@ -159,21 +131,21 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="enquiry"
-                    className="font-mono text-[11px] uppercase tracking-widest text-honos-muted"
+                    className="font-mono text-[11px] uppercase tracking-widest text-gray-500 font-semibold"
                   >
                     Service Required
                   </label>
                   <select
                     id="enquiry"
                     name="enquiry"
-                    className="mt-2 w-full border-b border-honos-line bg-transparent py-3 font-body text-lg text-honos-white focus:border-gold focus:outline-none"
+                    className="mt-2 w-full border-b-2 border-gray-200 bg-transparent py-3 font-body text-xl text-[#111827] font-medium focus:border-[#cc0000] focus:outline-none transition-colors"
                     defaultValue=""
                   >
                     <option value="" disabled>
                       Select...
                     </option>
                     {enquiryTypes.map((t) => (
-                      <option key={t} value={t} className="bg-void">
+                      <option key={t} value={t} className="text-[#111827]">
                         {t}
                       </option>
                     ))}
@@ -181,12 +153,13 @@ export function Contact() {
                   {errors.enquiry && <ErrorMsg>{errors.enquiry}</ErrorMsg>}
                 </div>
                 <Field label="Message" name="message" error={errors.message} multiline />
-                <Button type="submit" variant="filled">
+                <Button type="submit" variant="primary" className="mt-4 w-full rounded-xl">
                   Send via WhatsApp
                 </Button>
               </form>
             )}
           </div>
+
         </div>
       </div>
     </section>
@@ -205,12 +178,12 @@ function Field({
   multiline?: boolean;
 }) {
   const shared =
-    'mt-2 w-full border-b border-honos-line bg-transparent py-3 font-body text-lg text-honos-white transition-colors focus:border-gold focus:outline-none';
+    'mt-2 w-full border-b-2 border-gray-200 bg-transparent py-3 font-body text-xl text-[#111827] font-medium transition-colors focus:border-[#cc0000] focus:outline-none';
   return (
     <div>
       <label
         htmlFor={name}
-        className="font-mono text-[11px] uppercase tracking-widest text-honos-muted"
+        className="font-mono text-[11px] uppercase tracking-widest text-gray-500 font-semibold"
       >
         {label}
       </label>
@@ -226,6 +199,6 @@ function Field({
 
 function ErrorMsg({ children }: { children: string }) {
   return (
-    <p className="mt-1 font-mono text-[10px] text-gold-bright">{children}</p>
+    <p className="mt-2 font-mono text-[10px] text-[#cc0000] font-bold">{children}</p>
   );
 }

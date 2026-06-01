@@ -176,7 +176,7 @@ export default function AboutPage() {
           <h2 className="mb-8 font-display text-3xl uppercase text-honos-white">
             Visit Us
           </h2>
-          <ContactDetails variant="full" />
+          <ContactDetails />
         </section>
 
         <div className="mt-16 flex flex-wrap gap-6">

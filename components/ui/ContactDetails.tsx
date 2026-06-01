@@ -1,116 +1,61 @@
-import { contact, company } from '@/lib/company-data';
+import { contact } from '@/lib/company-data';
 
 type ContactDetailsProps = {
-  variant?: 'full' | 'compact';
   className?: string;
 };
 
 export function ContactDetails({
-  variant = 'full',
   className = '',
 }: ContactDetailsProps) {
-  const { google, justdial } = contact.ratings;
-
   return (
-    <address
-      className={`not-italic ${className}`}
-      itemScope
-      itemType="https://schema.org/SecurityService"
-    >
-      <meta itemProp="name" content={company.legalName} />
-
-      {variant === 'full' && (
-        <div className="mb-4 space-y-1">
-          <p className="font-mono text-[11px] uppercase tracking-widest text-brand-red">
-            {contact.category} · Verified · {company.yearsInBusiness} Years
-          </p>
-          <p className="font-mono text-[10px] text-honos-muted">
-            Google {google.score}★ ({google.count}) · Justdial {justdial.score}★ (
-            {justdial.count})
-          </p>
+    <address className={`not-italic space-y-10 ${className}`}>
+      
+      {/* Office Address */}
+      <div>
+        <h4 className="font-mono text-[11px] uppercase tracking-widest text-brand-red mb-4 font-bold">Head Office</h4>
+        <div className="space-y-1 font-body text-xl text-[#111827] font-medium">
+          {contact.addressLines.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
         </div>
-      )}
-
-      <div className="space-y-1 font-body text-lg text-honos-white">
-        {contact.addressLines.map((line) => (
-          <p key={line}>{line}</p>
-        ))}
-        <p className="text-honos-muted">Located in {contact.locatedIn}</p>
-        {variant === 'full' && (
-          <>
-            <p className="mt-4 font-mono text-xs text-honos-muted">
-              Registered: {contact.registeredAddress}
-            </p>
-            <p className="font-mono text-xs text-honos-muted">
-              Plus Code: {contact.plusCode}
-            </p>
-            <p className="font-mono text-xs text-honos-muted">{contact.hours}</p>
-          </>
-        )}
       </div>
 
-      <div className="mt-6 space-y-2">
-        {contact.phones.map((p) => (
-          <a
-            key={p.tel}
-            href={`tel:${p.tel}`}
-            className="block font-mono text-sm uppercase tracking-widest text-gold transition-colors hover:text-brand-red"
-            data-cursor="link"
-          >
-            {p.display}
-            {variant === 'full' && (
-              <span className="ml-2 text-[10px] text-honos-muted">({p.label})</span>
-            )}
-          </a>
-        ))}
+      {/* Phone Numbers */}
+      <div>
+        <h4 className="font-mono text-[11px] uppercase tracking-widest text-brand-red mb-4 font-bold">Call Us</h4>
+        <div className="space-y-3">
+          {contact.phones.map((p) => (
+            <a
+              key={p.tel}
+              href={`tel:${p.tel}`}
+              className="block font-display text-3xl text-[#111827] font-bold transition-colors hover:text-[#cc0000]"
+            >
+              {p.display}
+              <span className="ml-3 font-mono text-[10px] text-gray-500 tracking-widest uppercase">({p.label})</span>
+            </a>
+          ))}
+        </div>
       </div>
 
-      {variant === 'full' && (
-        <div className="mt-4 space-y-2">
+      {/* Email Addresses */}
+      <div>
+        <h4 className="font-mono text-[11px] uppercase tracking-widest text-brand-red mb-4 font-bold">Email Us</h4>
+        <div className="space-y-2">
           <a
             href={`mailto:${contact.email}`}
-            className="block font-mono text-xs text-honos-muted transition-colors hover:text-gold"
-            data-cursor="link"
+            className="block font-body text-lg text-[#111827] font-medium transition-colors hover:text-[#cc0000]"
           >
             {contact.email}
           </a>
           <a
             href={`mailto:${contact.emailAlt}`}
-            className="block font-mono text-xs text-honos-muted transition-colors hover:text-gold"
-            data-cursor="link"
+            className="block font-body text-lg text-[#111827] font-medium transition-colors hover:text-[#cc0000]"
           >
             {contact.emailAlt}
           </a>
-          <a
-            href={contact.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block font-mono text-xs text-honos-muted transition-colors hover:text-gold"
-            data-cursor="link"
-          >
-            honossecurities.com
-          </a>
-          <a
-            href={`https://wa.me/${contact.phoneTel.replace('+', '')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-block font-mono text-[11px] uppercase tracking-widest text-brand-red"
-            data-cursor="link"
-          >
-            WhatsApp Enquiry →
-          </a>
         </div>
-      )}
+      </div>
 
-      <a
-        href={contact.mapsUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-4 block font-mono text-[11px] uppercase tracking-widest text-honos-muted transition-colors hover:text-gold"
-        data-cursor="link"
-      >
-        Open in Google Maps →
-      </a>
     </address>
   );
 }
