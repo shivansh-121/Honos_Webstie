@@ -54,7 +54,7 @@ export function Industries() {
               {active.name}
             </h3>
               <ul className="grid gap-2 sm:grid-cols-2">
-                {active.clients.map((client) => (
+                {active.clients.slice(0, 5).map((client) => (
                   <li
                     key={client}
                     className="font-body text-base text-honos-white"

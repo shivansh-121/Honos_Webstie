@@ -7,7 +7,6 @@ import { SectionLabel } from '@/components/ui/SectionLabel';
 import { SecurityBackdrop } from '@/components/ui/SecurityBackdrop';
 import { useLoading } from '@/context/LoadingContext';
 import { company, whyChooseUs } from '@/lib/company-data';
-import { HeroHud } from '@/components/sections/hero/HeroHud';
 import { HeroStats } from '@/components/sections/hero/HeroStats';
 import { HeroPanel } from '@/components/sections/hero/HeroPanel';
 import { HeroVisual } from '@/components/sections/hero/HeroVisual';
@@ -56,8 +55,6 @@ export function Hero() {
           aria-hidden
         />
       </div>
-
-      <HeroHud />
 
       <div className="relative z-20 flex flex-1 flex-col">
         <div className="mx-auto w-full max-w-container flex-1 px-6 py-10 lg:px-10 lg:py-14">

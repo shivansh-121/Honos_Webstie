@@ -64,103 +64,56 @@ export function HeroVisual() {
           transformStyle: 'preserve-3d',
         }}
       >
-        {/* Outer perimeter */}
+        {/* Outer professional border */}
         <motion.div
-          className="pointer-events-none absolute inset-[8%] rounded-full border-[1.5px] border-brand-red/50 shadow-[0_0_30px_rgba(227,30,36,0.15)]"
+          className="pointer-events-none absolute inset-[10%] rounded-full border-2 border-brand-navy/60 shadow-[0_0_20px_rgba(27,54,93,0.2)]"
           style={{ transform: 'translateZ(30px)' }}
         />
-        <motion.div
-          className="pointer-events-none absolute inset-[18%] rounded-full border-[1.5px] border-dashed border-brand-navy/70 shadow-[0_0_20px_rgba(27,54,93,0.1)]"
-          style={{ transform: 'translateZ(60px)' }}
-        />
 
-        {/* Hex shield */}
+        {/* Solid Shield Background */}
         <motion.div
-          className="pointer-events-none absolute inset-[22%] bg-brand-navy/5 shadow-[0_0_40px_rgba(27,54,93,0.15)]"
+          className="pointer-events-none absolute inset-[15%] bg-gradient-to-br from-brand-navy/80 to-void border border-gold/40 shadow-xl"
           style={{
-            clipPath:
-              'polygon(50% 0%, 95% 18%, 95% 65%, 50% 100%, 5% 65%, 5% 18%)',
-            transform: 'translateZ(90px)',
+            clipPath: 'polygon(50% 0%, 90% 20%, 90% 75%, 50% 100%, 10% 75%, 10% 20%)',
+            transform: 'translateZ(60px)',
           }}
         />
 
         {/* Inner mark */}
         <motion.div
           className="relative z-10 flex cursor-pointer flex-col items-center justify-center text-center"
-          style={{ transform: 'translateZ(120px)' }}
+          style={{ transform: 'translateZ(90px)' }}
           onClick={() => {
             setIsClicked(true);
             setTimeout(() => setIsClicked(false), 1000);
           }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.85 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           animate={isClicked ? { 
-            scale: [1, 0.7, 1.4, 1], 
-            rotateZ: [0, -25, 25, -10, 10, 0],
+            scale: [1, 0.9, 1.1, 1], 
           } : {}}
-          transition={{ duration: 0.6, ease: 'easeInOut' }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
         >
-          <p className="relative font-display text-[clamp(4rem,12vw,7rem)] leading-none text-brand-red/90">
+          <p className="font-display text-[clamp(4rem,12vw,7rem)] leading-none text-gold drop-shadow-md">
             H
-            {/* Glitch text effect overlay when clicked */}
-            <AnimatePresence>
-              {isClicked && (
-                <>
-                  <motion.span
-                    initial={{ opacity: 0, x: 0, y: 0 }}
-                    animate={{ opacity: [0, 1, 1, 0], x: [-15, 20, -10, 0], y: [5, -5, 5, 0] }}
-                    transition={{ duration: 0.4, times: [0, 0.3, 0.6, 1] }}
-                    className="absolute inset-0 text-cyan-400 mix-blend-screen"
-                  >
-                    H
-                  </motion.span>
-                  <motion.span
-                    initial={{ opacity: 0, x: 0, y: 0 }}
-                    animate={{ opacity: [0, 1, 1, 0], x: [15, -20, 10, 0], y: [-5, 5, -5, 0] }}
-                    transition={{ duration: 0.4, times: [0, 0.3, 0.6, 1] }}
-                    className="absolute inset-0 text-brand-red mix-blend-screen"
-                  >
-                    H
-                  </motion.span>
-                </>
-              )}
-            </AnimatePresence>
           </p>
-          <p className="mt-2 font-mono text-[10px] uppercase tracking-ultra text-gold">
-            Protection Unit
+          <p className="mt-2 font-mono text-[10px] uppercase tracking-ultra text-white/90">
+            Protection Services
           </p>
 
-          {/* Massive Shockwave ring */}
+          {/* Simple subtle ring on click */}
           <AnimatePresence>
             {isClicked && (
               <motion.div
-                initial={{ scale: 0.2, opacity: 1 }}
-                animate={{ scale: 6, opacity: 0 }}
+                initial={{ scale: 0.8, opacity: 0.8 }}
+                animate={{ scale: 2, opacity: 0 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1, ease: 'easeOut' }}
-                className="pointer-events-none absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-brand-red shadow-[0_0_40px_rgba(255,0,0,0.8)]"
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+                className="pointer-events-none absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-gold/50"
               />
             )}
           </AnimatePresence>
         </motion.div>
-
-        {/* Corner ticks */}
-        <motion.span
-          className="absolute left-[6%] top-[6%] h-8 w-px bg-brand-red/50"
-          style={{ transform: 'translateZ(30px)' }}
-        />
-        <motion.span
-          className="absolute left-[6%] top-[6%] h-px w-8 bg-brand-red/50"
-          style={{ transform: 'translateZ(30px)' }}
-        />
-        <motion.span
-          className="absolute bottom-[6%] right-[6%] h-8 w-px bg-brand-red/50"
-          style={{ transform: 'translateZ(30px)' }}
-        />
-        <motion.span
-          className="absolute bottom-[6%] right-[6%] h-px w-8 bg-brand-red/50"
-          style={{ transform: 'translateZ(30px)' }}
-        />
       </motion.div>
     </div>
   );

@@ -8,17 +8,11 @@ export function HeroPanel() {
 
   return (
     <aside className="hero-animate hero-panel relative">
-      <div className="hero-panel-scan" aria-hidden />
-
-      <div className="relative border border-honos-line bg-obsidian/95 p-6 backdrop-blur-md lg:p-8">
+      <div className="relative border border-honos-line bg-obsidian/95 p-6 backdrop-blur-md lg:p-8 shadow-xl">
         <div className="mb-6 flex items-center justify-between border-b border-honos-line pb-4">
-          <p className="font-mono text-[10px] uppercase tracking-ultra text-brand-red">
-            Operations Brief
+          <p className="font-display text-xl uppercase tracking-wider text-brand-red">
+            Company Overview
           </p>
-          <span className="flex items-center gap-2 font-mono text-[9px] text-honos-muted">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand-red" />
-            Live
-          </span>
         </div>
 
         <div className="mb-6 grid grid-cols-2 gap-3">
