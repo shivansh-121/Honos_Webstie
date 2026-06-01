@@ -212,17 +212,6 @@ export const supervision = {
   ],
 };
 
-export const compliance = [
-  { label: 'CIN', value: 'U74999GJ2017PTC095095' },
-  { label: 'Shop & Establishment No.', value: 'RC / LZ / C / MAGOB / 6682' },
-  { label: 'ISO Certification No.', value: 'Q-601127032026' },
-  { label: 'PAN No.', value: 'AAECH0680G' },
-  { label: 'GST No.', value: '24AAECH0680G1ZV' },
-  { label: 'ESIC No.', value: '39000549550000999' },
-  { label: 'PF No.', value: 'SRSRT1594114000' },
-  { label: 'Professional Tax No.', value: 'PEC03SE00062085' },
-];
-
 export const industryCategories = [
   {
     name: 'Cinema & Multiplex',

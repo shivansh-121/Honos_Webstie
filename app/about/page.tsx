@@ -9,7 +9,6 @@ import {
   whyChooseUs,
   training,
   supervision,
-  compliance,
   terms,
   conclusion,
 } from '@/lib/company-data';
@@ -132,21 +131,7 @@ export default function AboutPage() {
           </ul>
         </section>
 
-        <section className="py-8">
-          <h2 className="mb-8 font-display text-4xl uppercase text-honos-white">
-            Compliance & Registration
-          </h2>
-          <dl className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {compliance.map((item) => (
-              <div key={item.label}>
-                <dt className="font-mono text-[10px] uppercase tracking-widest text-honos-muted">
-                  {item.label}
-                </dt>
-                <dd className="mt-1 font-mono text-sm text-gold">{item.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
+
 
         <section className="py-8">
           <h2 className="mb-8 font-display text-4xl uppercase text-honos-white">

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SectionLabel } from '@/components/ui/SectionLabel';
-import { company, whyChooseUs, compliance } from '@/lib/company-data';
+import { company, whyChooseUs } from '@/lib/company-data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -123,22 +123,7 @@ export function About() {
           </ul>
         </article>
 
-        <article className="about-panel flex h-full w-screen shrink-0 flex-col justify-center px-8 lg:px-20">
-          <SectionLabel className="mb-6">03 / Compliance & Registration</SectionLabel>
-          <h2 className="mb-10 font-display text-4xl uppercase tracking-wider text-honos-white">
-            Registered & Compliant
-          </h2>
-          <dl className="grid max-w-2xl gap-4 sm:grid-cols-2">
-            {compliance.map((item) => (
-              <div key={item.label} className="border-l border-gold pl-4">
-                <dt className="font-mono text-[10px] uppercase tracking-widest text-honos-muted">
-                  {item.label}
-                </dt>
-                <dd className="mt-1 font-mono text-sm text-gold">{item.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </article>
+
       </div>
     </section>
   );

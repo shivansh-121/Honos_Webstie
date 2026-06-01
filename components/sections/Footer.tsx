@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { company, compliance, contact } from '@/lib/company-data';
+import { company, contact } from '@/lib/company-data';
 import { ContactDetails } from '@/components/ui/ContactDetails';
 import { NavBrand } from '@/components/ui/NavBrand';
 
@@ -52,20 +52,7 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="section-divider my-10" />
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {compliance.slice(0, 3).map((c) => (
-            <div key={c.label}>
-              <p className="font-mono text-[9px] uppercase tracking-widest text-honos-muted">
-                {c.label}
-              </p>
-              <p className="mt-1 font-mono text-xs text-gold">{c.value}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="section-divider my-10" />
 
         <p className="font-mono text-[10px] text-honos-muted">
           © {new Date().getFullYear()} {company.legalName}. All rights reserved.
