@@ -353,14 +353,6 @@ export const industryCategories = [
     ],
   },
   {
-    name: 'Aviation & Airports',
-    clients: [
-      'Regional Airports',
-      'Aviation Training Centers',
-      'Cargo Terminals',
-    ],
-  },
-  {
     name: 'Manufacturing Plants',
     clients: [
       'Automotive Plants',
