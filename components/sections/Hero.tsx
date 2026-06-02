@@ -69,7 +69,7 @@ export function Hero() {
               className="relative rounded-2xl overflow-hidden shadow-2xl h-[600px] border border-gray-200"
             >
               <img 
-                src="https://images.unsplash.com/photo-1541888075865-985175945145?q=80&w=1000&auto=format&fit=crop" 
+                src="/images/hero_guard.png" 
                 alt="Professional Security" 
                 className="w-full h-full object-cover"
               />
