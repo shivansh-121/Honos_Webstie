@@ -97,10 +97,8 @@ export const whyChooseUs = [
   'ISO 9001:2015 & PSARA Certified',
   'Presence in 6 states across India',
   '2000+ strong verified workforce',
-  '24/7 supervision with regular field officer visits',
   'Total manpower solutions: Security, Housekeeping & Facility Management',
   'Experience with Government & Corporate clients',
-  'Quick replacement of guards within 24 hours',
 ];
 
 export const services = [
