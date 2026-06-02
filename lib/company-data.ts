@@ -106,36 +106,17 @@ export const whyChooseUs = [
 export const services = [
   {
     num: '01',
-    title: 'Security Supervisor',
+    title: 'Security Personnel (Guards & Supervisors)',
     points: [
-      'Site supervision and management',
-      'Reporting and coordination',
-      'Emergency handling',
-      'Security supervision',
-      'Maintain registers and attendance',
-      'Monitor guards',
-      'Ensure discipline',
+      'Comprehensive site supervision and guard management',
+      'Access control, frisking, and protection of premises',
+      'Dedicated lady guards for female visitors and ladies\' areas',
+      'Emergency handling and crowd management',
+      'Maintenance of registers and disciplined operations',
     ],
   },
   {
     num: '02',
-    title: 'Security Guard',
-    points: [
-      'Access control & frisking',
-      'Crowd management',
-      'Protection of premises',
-    ],
-  },
-  {
-    num: '03',
-    title: 'Lady Guard',
-    points: [
-      'Checking of female visitors',
-      "Monitoring ladies' areas",
-    ],
-  },
-  {
-    num: '04',
     title: 'Gunman (Armed Guard)',
     points: [
       'Deployment of trained and licensed armed personnel',
@@ -145,7 +126,7 @@ export const services = [
     ],
   },
   {
-    num: '05',
+    num: '03',
     title: 'Housekeeping Services',
     points: [
       'Cleaning and maintenance of premises',
@@ -155,7 +136,7 @@ export const services = [
     ],
   },
   {
-    num: '06',
+    num: '04',
     title: 'Manpower Outsourcing (All Categories)',
     points: [
       'Skilled, semi-skilled, and unskilled manpower',
@@ -167,7 +148,7 @@ export const services = [
     ],
   },
   {
-    num: '07',
+    num: '05',
     title: 'Event Security',
     points: [
       'Handling small to large-scale events',
@@ -176,7 +157,7 @@ export const services = [
     ],
   },
   {
-    num: '08',
+    num: '06',
     title: 'Bouncer / Bodyguard Services',
     points: [
       'Deployment of physically fit, trained, and experienced bouncers',
@@ -188,7 +169,7 @@ export const services = [
     ],
   },
   {
-    num: '09',
+    num: '07',
     title: 'Facility Management',
     points: [
       'Comprehensive facility upkeep',
@@ -198,7 +179,7 @@ export const services = [
     ],
   },
   {
-    num: '10',
+    num: '08',
     title: 'Specialized Corporate Security',
     points: [
       'Executive protection',
@@ -208,7 +189,7 @@ export const services = [
     ],
   },
   {
-    num: '11',
+    num: '09',
     title: 'Technical & Maintenance Staff',
     points: [
       'Electricians and plumbers',
@@ -218,7 +199,7 @@ export const services = [
     ],
   },
   {
-    num: '12',
+    num: '10',
     title: 'Cash Management Services',
     points: [
       'Secure cash transit',
