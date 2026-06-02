@@ -81,17 +81,17 @@ export function Hero() {
               initial={{ opacity: 0, y: -20, x: -20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -left-6 md:-left-10 top-6 md:top-8 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
+              className="absolute left-2 sm:-left-6 md:-left-10 top-4 md:top-8 z-20 backdrop-blur-md bg-white/80 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2.5 sm:p-4 md:p-6 rounded-xl md:rounded-2xl"
             >
-              <div className="flex items-center gap-3 md:gap-4">
-                <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-[#cc0000] text-white">
-                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                <div className="flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-[#cc0000] text-white">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
                 <div>
-                  <p className="font-display text-xl md:text-2xl font-bold text-brand-navy leading-none mb-1"><Counter end={2000} suffix="+" /></p>
-                  <p className="font-mono text-[8px] md:text-[10px] uppercase tracking-widest text-gray-600">Strong Workforce</p>
+                  <p className="font-display text-base sm:text-xl md:text-2xl font-bold text-brand-navy leading-none mb-0.5"><Counter end={2000} suffix="+" /></p>
+                  <p className="font-mono text-[7px] sm:text-[8px] md:text-[10px] uppercase tracking-widest text-gray-600">Strong Workforce</p>
                 </div>
               </div>
             </motion.div>
@@ -101,15 +101,15 @@ export function Hero() {
               initial={{ opacity: 0, y: -20, x: 20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -right-6 md:-right-10 top-32 md:top-40 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
+              className="absolute right-2 sm:-right-6 md:-right-10 top-[28%] md:top-40 z-20 backdrop-blur-md bg-white/80 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2.5 sm:p-4 md:p-6 rounded-xl md:rounded-2xl"
             >
-              <div className="flex items-center gap-3 md:gap-4">
-                <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-brand-navy text-white font-display text-lg md:text-xl font-bold">
+              <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                <div className="flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-brand-navy text-white font-display text-sm sm:text-lg md:text-xl font-bold">
                   <Counter end={company.yearsInBusiness} suffix="+" />
                 </div>
                 <div>
-                  <p className="font-display text-xl md:text-2xl font-bold text-brand-navy leading-none mb-1">Years of Exp</p>
-                  <p className="font-mono text-[8px] md:text-[10px] uppercase tracking-widest text-gray-600">In the Industry</p>
+                  <p className="font-display text-base sm:text-xl md:text-2xl font-bold text-brand-navy leading-none mb-0.5">Years of Exp</p>
+                  <p className="font-mono text-[7px] sm:text-[8px] md:text-[10px] uppercase tracking-widest text-gray-600">In the Industry</p>
                 </div>
               </div>
             </motion.div>
@@ -119,17 +119,17 @@ export function Hero() {
               initial={{ opacity: 0, y: 20, x: -20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -left-6 md:-left-10 bottom-32 md:bottom-40 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
+              className="absolute left-2 sm:-left-6 md:-left-10 bottom-[28%] md:bottom-40 z-20 backdrop-blur-md bg-white/80 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2.5 sm:p-4 md:p-6 rounded-xl md:rounded-2xl"
             >
-              <div className="flex items-center gap-3 md:gap-4">
-                <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-gold text-white">
-                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                <div className="flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-gold text-white">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
                 <div>
-                  <p className="font-display text-xl md:text-2xl font-bold text-brand-navy leading-none mb-1"><Counter end={100} suffix="+" /></p>
-                  <p className="font-mono text-[8px] md:text-[10px] uppercase tracking-widest text-gray-600">Active Clients</p>
+                  <p className="font-display text-base sm:text-xl md:text-2xl font-bold text-brand-navy leading-none mb-0.5"><Counter end={100} suffix="+" /></p>
+                  <p className="font-mono text-[7px] sm:text-[8px] md:text-[10px] uppercase tracking-widest text-gray-600">Active Clients</p>
                 </div>
               </div>
             </motion.div>
@@ -139,18 +139,18 @@ export function Hero() {
               initial={{ opacity: 0, y: 20, x: 20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -right-6 md:-right-10 bottom-6 md:bottom-8 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
+              className="absolute right-2 sm:-right-6 md:-right-10 bottom-4 md:bottom-8 z-20 backdrop-blur-md bg-white/80 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2.5 sm:p-4 md:p-6 rounded-xl md:rounded-2xl"
             >
-              <div className="flex items-center gap-3 md:gap-4">
-                <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-brand-red text-white">
-                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                <div className="flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-brand-red text-white">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
                 <div>
-                  <p className="font-display text-xl md:text-2xl font-bold text-brand-navy leading-none mb-1"><Counter end={6} suffix="+" /></p>
-                  <p className="font-mono text-[8px] md:text-[10px] uppercase tracking-widest text-gray-600">States Present</p>
+                  <p className="font-display text-base sm:text-xl md:text-2xl font-bold text-brand-navy leading-none mb-0.5"><Counter end={6} suffix="+" /></p>
+                  <p className="font-mono text-[7px] sm:text-[8px] md:text-[10px] uppercase tracking-widest text-gray-600">States Present</p>
                 </div>
               </div>
             </motion.div>
