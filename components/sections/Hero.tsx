@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { company } from '@/lib/company-data';
 import { Button } from '@/components/ui/Button';
+import { Counter } from '@/components/ui/Counter';
 
 export function Hero() {
   return (
@@ -89,7 +90,7 @@ export function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-display text-2xl font-bold text-brand-navy leading-none mb-1">2000+</p>
+                  <p className="font-display text-2xl font-bold text-brand-navy leading-none mb-1"><Counter end={2000} suffix="+" /></p>
                   <p className="font-mono text-[10px] uppercase tracking-widest text-gray-600">Strong Workforce</p>
                 </div>
               </div>
@@ -104,7 +105,7 @@ export function Hero() {
             >
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-navy text-white font-display text-xl font-bold">
-                  {company.yearsInBusiness}+
+                  <Counter end={company.yearsInBusiness} suffix="+" />
                 </div>
                 <div>
                   <p className="font-display text-xl font-bold text-brand-navy leading-none mb-1">Years of Experience</p>
@@ -127,7 +128,7 @@ export function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-display text-xl md:text-2xl font-bold text-brand-navy leading-none mb-1">100+</p>
+                  <p className="font-display text-xl md:text-2xl font-bold text-brand-navy leading-none mb-1"><Counter end={100} suffix="+" /></p>
                   <p className="font-mono text-[8px] md:text-[10px] uppercase tracking-widest text-gray-600">Active Clients</p>
                 </div>
               </div>
