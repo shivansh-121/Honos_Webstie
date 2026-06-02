@@ -9,7 +9,7 @@ export function Commitment() {
   const [index, setIndex] = useState(0);
 
   return (
-    <section className="border-y border-honos-line bg-obsidian py-24 lg:py-32">
+    <section className="border-t border-honos-line bg-obsidian py-24 lg:py-32">
       <div className="mx-auto max-w-container px-6 lg:px-10">
         <SectionLabel className="mb-4">Our Assurance</SectionLabel>
         <h2 className="mb-16 font-display text-5xl uppercase tracking-wider text-honos-white">

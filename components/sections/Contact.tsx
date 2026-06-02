@@ -69,6 +69,9 @@ export function Contact() {
         className="absolute inset-0 z-0 opacity-[0.03]" 
         style={{ backgroundImage: 'radial-gradient(#1b365d 2px, transparent 2px)', backgroundSize: '40px 40px' }}
       ></div>
+      
+      {/* Top edge blend gradient to merge with the previous section (Commitment) */}
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-obsidian to-transparent z-10 pointer-events-none" />
 
       <div className="relative z-10 mx-auto w-full max-w-3xl px-6 lg:px-10">
         
