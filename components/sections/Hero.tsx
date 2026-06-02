@@ -69,7 +69,7 @@ export function Hero() {
               className="relative rounded-2xl overflow-hidden shadow-2xl h-[600px] border border-gray-200"
             >
               <img 
-                src="/images/hero_guard.png" 
+                src={`/images/hero_guard.png?v=${Date.now()}`} 
                 alt="Professional Security" 
                 className="w-full h-full object-cover"
               />
