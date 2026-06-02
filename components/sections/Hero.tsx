@@ -81,7 +81,7 @@ export function Hero() {
               initial={{ opacity: 0, y: -20, x: -20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -left-6 md:-left-10 top-16 md:top-20 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
+              className="absolute -left-6 md:-left-10 top-6 md:top-8 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
             >
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-[#cc0000] text-white">
@@ -96,12 +96,12 @@ export function Hero() {
               </div>
             </motion.div>
 
-            {/* Glassmorphic Floating Badge 2 - Top Right */}
+            {/* Glassmorphic Floating Badge 2 - Middle Right */}
             <motion.div 
               initial={{ opacity: 0, y: -20, x: 20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -right-6 md:-right-10 top-16 md:top-20 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
+              className="absolute -right-6 md:-right-10 top-32 md:top-40 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
             >
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-brand-navy text-white font-display text-lg md:text-xl font-bold">
@@ -114,12 +114,12 @@ export function Hero() {
               </div>
             </motion.div>
 
-            {/* Glassmorphic Floating Badge 3 - Bottom Left */}
+            {/* Glassmorphic Floating Badge 3 - Middle Left */}
             <motion.div 
               initial={{ opacity: 0, y: 20, x: -20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -left-6 md:-left-10 bottom-16 md:bottom-20 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
+              className="absolute -left-6 md:-left-10 bottom-32 md:bottom-40 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
             >
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-gold text-white">
@@ -139,7 +139,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20, x: 20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -right-6 md:-right-10 bottom-16 md:bottom-20 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
+              className="absolute -right-6 md:-right-10 bottom-6 md:bottom-8 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
             >
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-brand-red text-white">
