@@ -132,11 +132,11 @@ export function CareerForm() {
   };
 
   return (
-    <section className="relative py-24 lg:py-32 bg-white">
+    <section className="relative py-24 lg:py-32 bg-void">
       <div className="mx-auto max-w-4xl px-6 lg:px-10">
         <div className="text-center mb-16">
           <SectionLabel className="mb-4 justify-center">Join Our Team</SectionLabel>
-          <h2 className="font-display text-4xl uppercase tracking-wider text-void md:text-5xl font-bold">
+          <h2 className="font-display text-4xl uppercase tracking-wider text-brand-navy md:text-5xl font-bold">
             Careers at Honos
           </h2>
           <p className="mt-4 font-body text-xl text-honos-muted">
@@ -144,7 +144,7 @@ export function CareerForm() {
           </p>
         </div>
 
-        <div className="bg-[#f9f9fb] p-8 md:p-12 rounded-2xl border border-gray-200 shadow-xl">
+        <div className="bg-obsidian p-8 md:p-12 rounded-2xl border border-steel shadow-xl">
           {submitted ? (
             <div className="text-center py-12">
               <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-600 mb-6">
@@ -152,7 +152,7 @@ export function CareerForm() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="font-display text-2xl font-bold text-void mb-2 uppercase tracking-widest">Application Ready</h3>
+              <h3 className="font-display text-2xl font-bold text-brand-navy mb-2 uppercase tracking-widest">Application Ready</h3>
               <p className="font-body text-honos-muted text-lg max-w-md mx-auto">
                 Your application PDF has been downloaded. Please attach it in the WhatsApp chat that just opened to complete your application.
               </p>
@@ -165,24 +165,24 @@ export function CareerForm() {
               
               <div className="grid gap-8 md:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="block font-mono text-xs uppercase tracking-widest text-void font-bold">Full Name *</label>
+                  <label htmlFor="name" className="block font-mono text-xs uppercase tracking-widest text-honos-white font-bold">Full Name *</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    className="mt-2 w-full border-b border-gray-300 bg-transparent py-3 font-body text-lg text-void outline-none focus:border-brand-red transition-colors"
+                    className="mt-2 w-full border-b border-steel bg-transparent py-3 font-body text-lg text-honos-white outline-none focus:border-brand-red transition-colors"
                     placeholder="Enter your full name"
                   />
                   {errors.name && <p className="mt-2 font-mono text-xs text-brand-red">{errors.name}</p>}
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block font-mono text-xs uppercase tracking-widest text-void font-bold">Phone Number *</label>
+                  <label htmlFor="phone" className="block font-mono text-xs uppercase tracking-widest text-honos-white font-bold">Phone Number *</label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="mt-2 w-full border-b border-gray-300 bg-transparent py-3 font-body text-lg text-void outline-none focus:border-brand-red transition-colors"
+                    className="mt-2 w-full border-b border-steel bg-transparent py-3 font-body text-lg text-honos-white outline-none focus:border-brand-red transition-colors"
                     placeholder="+91"
                   />
                   {errors.phone && <p className="mt-2 font-mono text-xs text-brand-red">{errors.phone}</p>}
@@ -191,23 +191,23 @@ export function CareerForm() {
 
               <div className="grid gap-8 md:grid-cols-2">
                 <div>
-                  <label htmlFor="email" className="block font-mono text-xs uppercase tracking-widest text-void font-bold">Email Address</label>
+                  <label htmlFor="email" className="block font-mono text-xs uppercase tracking-widest text-honos-white font-bold">Email Address</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="mt-2 w-full border-b border-gray-300 bg-transparent py-3 font-body text-lg text-void outline-none focus:border-brand-red transition-colors"
+                    className="mt-2 w-full border-b border-steel bg-transparent py-3 font-body text-lg text-honos-white outline-none focus:border-brand-red transition-colors"
                     placeholder="you@example.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="dob" className="block font-mono text-xs uppercase tracking-widest text-void font-bold">Date of Birth *</label>
+                  <label htmlFor="dob" className="block font-mono text-xs uppercase tracking-widest text-honos-white font-bold">Date of Birth *</label>
                   <input
                     type="date"
                     id="dob"
                     name="dob"
-                    className="mt-2 w-full border-b border-gray-300 bg-transparent py-3 font-body text-lg text-void outline-none focus:border-brand-red transition-colors"
+                    className="mt-2 w-full border-b border-steel bg-transparent py-3 font-body text-lg text-honos-white outline-none focus:border-brand-red transition-colors"
                   />
                   {errors.dob && <p className="mt-2 font-mono text-xs text-brand-red">{errors.dob}</p>}
                 </div>
@@ -215,12 +215,12 @@ export function CareerForm() {
 
               <div className="grid gap-8 md:grid-cols-2">
                 <div>
-                  <label htmlFor="department" className="block font-mono text-xs uppercase tracking-widest text-void font-bold">Department *</label>
+                  <label htmlFor="department" className="block font-mono text-xs uppercase tracking-widest text-honos-white font-bold">Department *</label>
                   <div className="relative mt-2">
                     <select
                       id="department"
                       name="department"
-                      className="w-full appearance-none border-b border-gray-300 bg-transparent py-3 font-body text-lg text-void outline-none focus:border-brand-red transition-colors"
+                      className="w-full appearance-none border-b border-steel bg-transparent py-3 font-body text-lg text-honos-white outline-none focus:border-brand-red transition-colors"
                       defaultValue=""
                     >
                       <option value="" disabled>Select a position</option>
@@ -228,7 +228,7 @@ export function CareerForm() {
                         <option key={dept} value={dept}>{dept}</option>
                       ))}
                     </select>
-                    <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-void">
+                    <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-honos-white">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
                       </svg>
@@ -238,19 +238,19 @@ export function CareerForm() {
                 </div>
 
                 <div>
-                  <label htmlFor="gender" className="block font-mono text-xs uppercase tracking-widest text-void font-bold">Gender</label>
+                  <label htmlFor="gender" className="block font-mono text-xs uppercase tracking-widest text-honos-white font-bold">Gender</label>
                   <div className="relative mt-2">
                     <select
                       id="gender"
                       name="gender"
-                      className="w-full appearance-none border-b border-gray-300 bg-transparent py-3 font-body text-lg text-void outline-none focus:border-brand-red transition-colors"
+                      className="w-full appearance-none border-b border-steel bg-transparent py-3 font-body text-lg text-honos-white outline-none focus:border-brand-red transition-colors"
                       defaultValue="Male"
                     >
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
                       <option value="Other">Other</option>
                     </select>
-                    <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-void">
+                    <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-honos-white">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
                       </svg>
@@ -260,24 +260,24 @@ export function CareerForm() {
               </div>
 
               <div>
-                <label htmlFor="address" className="block font-mono text-xs uppercase tracking-widest text-void font-bold">Full Address *</label>
+                <label htmlFor="address" className="block font-mono text-xs uppercase tracking-widest text-honos-white font-bold">Full Address *</label>
                 <textarea
                   id="address"
                   name="address"
                   rows={2}
-                  className="mt-2 w-full resize-none border-b border-gray-300 bg-transparent py-3 font-body text-lg text-void outline-none focus:border-brand-red transition-colors"
+                  className="mt-2 w-full resize-none border-b border-steel bg-transparent py-3 font-body text-lg text-honos-white outline-none focus:border-brand-red transition-colors"
                   placeholder="Enter your complete address"
                 />
                 {errors.address && <p className="mt-2 font-mono text-xs text-brand-red">{errors.address}</p>}
               </div>
 
               <div>
-                <label htmlFor="reason" className="block font-mono text-xs uppercase tracking-widest text-void font-bold">Why should we hire you?</label>
+                <label htmlFor="reason" className="block font-mono text-xs uppercase tracking-widest text-honos-white font-bold">Why should we hire you?</label>
                 <textarea
                   id="reason"
                   name="reason"
                   rows={4}
-                  className="mt-2 w-full resize-none border-b border-gray-300 bg-transparent py-3 font-body text-lg text-void outline-none focus:border-brand-red transition-colors"
+                  className="mt-2 w-full resize-none border-b border-steel bg-transparent py-3 font-body text-lg text-honos-white outline-none focus:border-brand-red transition-colors"
                   placeholder="Briefly explain your experience and why you are a good fit for this role."
                 />
               </div>
