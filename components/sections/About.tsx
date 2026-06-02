@@ -56,13 +56,13 @@ export function About() {
             >
               Leading Security & Manpower in India
             </h2>
-            <p className="font-body text-xl leading-relaxed text-honos-muted">
+            <p className="font-body text-base md:text-xl leading-relaxed text-honos-muted">
               {company.description}
             </p>
-            <p className="mt-6 font-body text-xl leading-relaxed text-honos-muted">
+            <p className="mt-4 md:mt-6 font-body text-base md:text-xl leading-relaxed text-honos-muted">
               {company.presence}
             </p>
-            <p className="mt-6 font-body text-xl leading-relaxed text-honos-muted">
+            <p className="mt-4 md:mt-6 font-body text-base md:text-xl leading-relaxed text-honos-muted">
               {company.sectors}
             </p>
           </div>
