@@ -82,21 +82,21 @@ export function Industries() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto"
+          className="grid gap-3 sm:gap-4 md:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 max-w-7xl mx-auto"
         >
           {industryCategories.map((cat, index) => (
             <motion.div 
               key={cat.name} 
               variants={cardVariants}
               whileHover={{ scale: 1.05, translateY: -5 }}
-              className="group relative border border-honos-line/40 bg-void/50 backdrop-blur-sm p-8 flex items-center justify-center text-center overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_0_30px_rgba(201,168,76,0.15)] rounded-xl"
+              className="group relative border border-honos-line/40 bg-void/50 backdrop-blur-sm p-4 sm:p-6 md:p-8 flex items-center justify-center text-center overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_0_30px_rgba(201,168,76,0.15)] rounded-xl min-h-[100px] sm:min-h-[120px]"
             >
               {/* Animated gradient hover background */}
               <div className="absolute inset-0 bg-gradient-to-tr from-brand-red/0 via-brand-red/5 to-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="mb-4 h-1 w-12 bg-brand-red rounded-full group-hover:bg-gold transition-colors duration-300" />
-                <h3 className="font-display text-xl uppercase text-honos-white font-bold leading-snug group-hover:text-gold transition-colors duration-300">
+              <div className="relative z-10 flex flex-col items-center w-full">
+                <div className="mb-2 sm:mb-4 h-1 w-8 sm:w-12 bg-brand-red rounded-full group-hover:bg-gold transition-colors duration-300" />
+                <h3 className="font-display text-sm sm:text-base lg:text-lg uppercase text-honos-white font-bold leading-tight group-hover:text-gold transition-colors duration-300">
                   {cat.name}
                 </h3>
               </div>
