@@ -203,12 +203,29 @@ export function CareerForm() {
 
                 <div>
                   <label htmlFor="dob" className="block font-mono text-xs uppercase tracking-widest text-honos-white font-bold">Date of Birth *</label>
-                  <input
-                    type="date"
-                    id="dob"
-                    name="dob"
-                    className="mt-2 w-full border-b border-steel bg-transparent py-3 font-body text-lg text-honos-white outline-none focus:border-brand-red transition-colors"
-                  />
+                  <div className="relative mt-2">
+                    <input
+                      type="date"
+                      id="dob"
+                      name="dob"
+                      className="w-full border-b border-steel bg-transparent py-3 font-body text-lg text-honos-white outline-none focus:border-brand-red transition-colors cursor-pointer [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:opacity-0"
+                      onClick={(e) => {
+                        try {
+                          if ('showPicker' in HTMLInputElement.prototype) {
+                            e.currentTarget.showPicker();
+                          }
+                        } catch (err) {}
+                      }}
+                    />
+                    <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-honos-white">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                      </svg>
+                    </div>
+                  </div>
                   {errors.dob && <p className="mt-2 font-mono text-xs text-brand-red">{errors.dob}</p>}
                 </div>
               </div>
