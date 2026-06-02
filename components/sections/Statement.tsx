@@ -59,6 +59,9 @@ export function Statement() {
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-void py-32"
     >
       <div className="absolute inset-0">
+        {/* Top edge blend gradient to merge with the previous section (Services) */}
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-obsidian to-transparent z-20 pointer-events-none" />
+        
         <SecurityBackdrop variant="section" />
         <div
           className="pointer-events-none absolute inset-0"
