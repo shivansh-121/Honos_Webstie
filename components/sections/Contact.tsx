@@ -62,7 +62,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden py-32 bg-[#f9f9fb]"
+      className="relative flex min-h-screen flex-col lg:justify-center overflow-hidden pt-32 pb-24 lg:py-32 bg-[#f9f9fb]"
     >
       {/* Background Dots */}
       <div 
