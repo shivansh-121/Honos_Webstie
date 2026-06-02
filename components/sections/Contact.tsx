@@ -3,7 +3,7 @@
 import { useState, FormEvent } from 'react';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { Button } from '@/components/ui/Button';
-import { ContactDetails } from '@/components/ui/ContactDetails';
+
 import { enquiryTypes, contact } from '@/lib/company-data';
 
 export function Contact() {
@@ -70,43 +70,9 @@ export function Contact() {
         style={{ backgroundImage: 'radial-gradient(#1b365d 2px, transparent 2px)', backgroundSize: '40px 40px' }}
       ></div>
 
-      <div className="relative z-10 mx-auto w-full max-w-container px-6 lg:px-10">
+      <div className="relative z-10 mx-auto w-full max-w-3xl px-6 lg:px-10">
         
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24 items-start">
-          
-          {/* Left Column: Address and Map */}
-          <div>
-            <ContactDetails />
-            <div
-              className="mt-14 overflow-hidden border border-gray-200 shadow-lg group relative cursor-pointer rounded-2xl"
-              onClick={() => {
-                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-                const url = isIOS ? contact.appleMapUrl : contact.mapsUrl;
-                window.open(url, '_blank', 'noopener,noreferrer');
-              }}
-              title="Click to open in Maps"
-              role="link"
-              tabIndex={0}
-            >
-              {/* Clickable overlay */}
-              <div className="absolute inset-0 z-10 flex flex-col items-start justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-black/70 to-transparent pointer-events-none">
-                <span className="flex items-center gap-2 bg-[#cc0000] text-white px-4 py-2 font-mono text-[11px] uppercase tracking-widest font-bold rounded-lg shadow-md">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                  Open in Maps ↗
-                </span>
-              </div>
-              <iframe
-                title="Honos Protection Services location on Google Maps"
-                src={contact.mapsEmbedUrl}
-                className="h-[350px] w-full grayscale contrast-125 pointer-events-none"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </div>
-
-          {/* Right Column: Heading and Form */}
-          <div className="bg-white border border-gray-200 p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-3xl">
+        <div className="bg-white p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-3xl">
             <SectionLabel className="mb-4">Send an Enquiry</SectionLabel>
             <h2 className="mb-10 font-display text-[clamp(2.5rem,5vw,4rem)] uppercase leading-[0.9] tracking-tight text-[#111827] font-bold">
               Get In Touch.
