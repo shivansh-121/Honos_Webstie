@@ -403,6 +403,22 @@ export const industryCategories = [
       'Surat Urban Development Authority (SUDA)',
     ],
   },
+  {
+    name: 'Aviation & Airports',
+    clients: [
+      'Regional Airports',
+      'Aviation Training Centers',
+      'Cargo Terminals',
+    ],
+  },
+  {
+    name: 'Heavy Manufacturing Plants',
+    clients: [
+      'Automotive Plants',
+      'Steel & Metal Works',
+      'Textile Mills',
+    ],
+  },
 ];
 
 export const terms = [
