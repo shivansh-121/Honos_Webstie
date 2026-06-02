@@ -77,7 +77,7 @@ export function Contact() {
         
         <div className="bg-white p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-3xl">
             <SectionLabel className="mb-4">Send an Enquiry</SectionLabel>
-            <h2 className="mb-10 font-display text-[clamp(2.5rem,5vw,4rem)] uppercase leading-[0.9] tracking-tight text-[#111827] font-bold">
+            <h2 className="mb-10 font-display text-[clamp(2.5rem,5vw,4rem)] uppercase leading-[0.9] tracking-tight text-[#0f172a] font-bold">
               Get In Touch.
             </h2>
             
@@ -107,14 +107,14 @@ export function Contact() {
                   <select
                     id="enquiry"
                     name="enquiry"
-                    className="mt-2 w-full border-b-2 border-gray-200 bg-transparent py-3 font-body text-xl text-[#111827] font-medium focus:border-[#cc0000] focus:outline-none transition-colors"
+                    className="mt-2 w-full border-b-2 border-gray-200 bg-transparent py-3 font-body text-xl text-[#0f172a] font-medium focus:border-[#b91c1c] focus:outline-none transition-colors"
                     defaultValue=""
                   >
                     <option value="" disabled>
                       Select...
                     </option>
                     {enquiryTypes.map((t) => (
-                      <option key={t} value={t} className="text-[#111827]">
+                      <option key={t} value={t} className="text-[#0f172a]">
                         {t}
                       </option>
                     ))}
@@ -145,7 +145,7 @@ function Field({
   multiline?: boolean;
 }) {
   const shared =
-    'mt-2 w-full border-b-2 border-gray-200 bg-transparent py-3 font-body text-xl text-[#111827] font-medium transition-colors focus:border-[#cc0000] focus:outline-none';
+    'mt-2 w-full border-b-2 border-gray-200 bg-transparent py-3 font-body text-xl text-[#0f172a] font-medium transition-colors focus:border-[#b91c1c] focus:outline-none';
   return (
     <div>
       <label
@@ -166,6 +166,6 @@ function Field({
 
 function ErrorMsg({ children }: { children: string }) {
   return (
-    <p className="mt-2 font-mono text-[10px] text-[#cc0000] font-bold">{children}</p>
+    <p className="mt-2 font-mono text-[10px] text-[#b91c1c] font-bold">{children}</p>
   );
 }

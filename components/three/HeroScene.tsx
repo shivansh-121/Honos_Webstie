@@ -27,7 +27,7 @@ function SceneContent({
       <ambientLight intensity={0.3} />
       <directionalLight position={[4, 6, 5]} intensity={0.9} color="#f2f0ec" />
       <directionalLight position={[-4, 2, -2]} intensity={0.4} color="#1B365D" />
-      <pointLight position={[1, 0, 2]} intensity={0.5} color="#E31E24" distance={8} />
+      <pointLight position={[1, 0, 2]} intensity={0.5} color="#b91c1c" distance={8} />
       <group position={[0.6, 0, 0]}>
         <ShieldGeometry mouse={mouse} scrollProgress={scrollProgress} />
       </group>

@@ -115,7 +115,7 @@ export function Process() {
               y1="2"
               x2="1000"
               y2="2"
-              stroke="#C9A84C"
+              stroke="#b91c1c"
               strokeWidth="2"
             />
           </svg>
@@ -132,7 +132,7 @@ export function Process() {
               y1="0"
               x2="2"
               y2="1000"
-              stroke="#C9A84C"
+              stroke="#b91c1c"
               strokeWidth="4"
             />
           </svg>

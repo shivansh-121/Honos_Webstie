@@ -64,7 +64,7 @@ export function Preloader() {
           fontSize="96"
           fontFamily="var(--font-bebas), sans-serif"
           fill="none"
-          stroke="#E31E24"
+          stroke="#b91c1c"
           strokeWidth="2"
           strokeDasharray="400"
           strokeDashoffset="400"

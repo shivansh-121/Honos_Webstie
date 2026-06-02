@@ -9,7 +9,7 @@ type ParticleFieldProps = {
   color?: string;
 };
 
-export function ParticleField({ count = 5000, color = '#C9A84C' }: ParticleFieldProps) {
+export function ParticleField({ count = 5000, color = '#b91c1c' }: ParticleFieldProps) {
   const pointsRef = useRef<THREE.Points>(null);
 
   const [positions, velocities] = useMemo(() => {

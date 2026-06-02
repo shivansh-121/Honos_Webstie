@@ -4,14 +4,14 @@
 
 :root {
   /* Clean Light Theme Default */
-  --color-void: #f9f9fb;      /* Main Background */
+  --color-void: #f8fafc;      /* Cool Slate Background */
   --color-obsidian: #ffffff;  /* Card Background */
-  --color-steel: #e2e2e8;     /* Borders / Muted Bgs */
-  --color-gold: #c9a84c;      /* Accent */
-  --color-gold-bright: #b08d3a;
+  --color-steel: #e2e8f0;     /* Borders / Muted Bgs */
+  --color-gold: #b91c1c;      /* Accent (Crimson) */
+  --color-gold-bright: #991b1b;
   --color-brand-navy: #1b365d; /* Primary Dark Blue */
-  --color-brand-red: #e31e24;  /* Primary Red */
-  --color-white: #111827;     /* Main Text Color (Dark Gray) */
+  --color-brand-red: #b91c1c;  /* Primary Crimson */
+  --color-white: #0f172a;     /* Main Text Color (Deep Navy) */
   --color-muted: #4b5563;     /* Muted Text */
   --color-line: #d1d5db;      /* Divider Lines */
 }

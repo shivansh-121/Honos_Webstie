@@ -9,7 +9,7 @@ export const brand = {
   logoAlt: 'Honos Protection Services Pvt. Ltd. logo',
   colors: {
     navy: '#1B365D',
-    red: '#E31E24',
+    red: '#b91c1c',
   },
 };
 

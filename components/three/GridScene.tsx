@@ -17,10 +17,10 @@ function SurveillanceGrid() {
   return (
   <>
     <ambientLight intensity={0.15} />
-    <directionalLight position={[0, 5, 2]} intensity={0.5} color="#C9A84C" />
+    <directionalLight position={[0, 5, 2]} intensity={0.5} color="#b91c1c" />
     <gridHelper
       ref={gridRef}
-      args={[20, 40, '#C9A84C', '#1E1E2E']}
+      args={[20, 40, '#b91c1c', '#1E1E2E']}
       position={[0, 0, 0]}
     />
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.01, 0]}>

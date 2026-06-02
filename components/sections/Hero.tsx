@@ -23,7 +23,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-block bg-[#cc0000] px-4 py-2 mb-8 shadow-lg"
+              className="inline-block bg-[#b91c1c] px-4 py-2 mb-8 shadow-lg"
             >
               <h2 className="font-display text-white text-sm md:text-lg uppercase tracking-widest m-0 font-bold">
                 INDIA&apos;S TRUSTED PARTNER FOR SECURITY & MANPOWER
@@ -34,10 +34,10 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="mb-6 font-display text-[clamp(3rem,6vw,5.5rem)] uppercase leading-[0.9] tracking-tight text-[#111827] font-bold"
+              className="mb-6 font-display text-[clamp(3rem,6vw,5.5rem)] uppercase leading-[0.9] tracking-tight text-[#0f172a] font-bold"
             >
               TOTAL <span className="text-brand-navy">MANPOWER.</span><br/>
-              UNMATCHED <span className="text-[#cc0000]">TRUST.</span>
+              UNMATCHED <span className="text-[#b91c1c]">TRUST.</span>
             </motion.h1>
 
             <motion.p 
@@ -84,7 +84,7 @@ export function Hero() {
               className="absolute left-2 sm:-left-6 md:-left-10 top-4 md:top-8 z-20 backdrop-blur-md bg-white/80 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2.5 sm:p-4 md:p-6 rounded-xl md:rounded-2xl"
             >
               <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                <div className="flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-[#cc0000] text-white">
+                <div className="flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-[#b91c1c] text-white">
                   <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>

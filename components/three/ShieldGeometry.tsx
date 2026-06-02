@@ -28,7 +28,7 @@ export function ShieldGeometry({ mouse, scrollProgress }: ShieldGeometryProps) {
       {/* Outer perimeter ring — command / secure zone */}
       <mesh rotation={[Math.PI / 2, 0, 0]}>
         <torusGeometry args={[1.35, 0.02, 16, 64]} />
-        <meshBasicMaterial color="#E31E24" transparent opacity={0.55} />
+        <meshBasicMaterial color="#b91c1c" transparent opacity={0.55} />
       </mesh>
 
       {/* Shield body */}
@@ -47,7 +47,7 @@ export function ShieldGeometry({ mouse, scrollProgress }: ShieldGeometryProps) {
       <mesh scale={[1, 1.15, 0.12]}>
         <cylinderGeometry args={[0.95, 0.75, 0.21, 6]} />
         <meshBasicMaterial
-          color="#C9A84C"
+          color="#b91c1c"
           wireframe
           transparent
           opacity={0.25}
