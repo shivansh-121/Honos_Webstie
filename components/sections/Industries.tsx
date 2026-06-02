@@ -109,12 +109,19 @@ export function Industries() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-16 sm:mt-24 pt-6 sm:pt-8 flex justify-center"
+          className="mt-16 sm:mt-24 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6"
         >
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 px-4 sm:px-6 py-3 sm:py-4 bg-white/5 backdrop-blur-md rounded-2xl md:rounded-full border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.2)] text-center">
+          <div className="flex justify-center items-center gap-2 sm:gap-3 px-6 py-3 sm:py-4 bg-white/5 backdrop-blur-md rounded-2xl md:rounded-full border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-red animate-pulse shrink-0" />
-            <p className="font-mono text-[8px] sm:text-[9px] md:text-[11px] text-honos-white uppercase tracking-wider sm:tracking-[0.2em] leading-relaxed">
-              ISO 9001:2015 Certified <span className="hidden sm:inline mx-1 sm:mx-2 text-gold">·</span><br className="sm:hidden" /> PSARA Certified
+            <p className="font-mono text-[9px] md:text-[11px] text-honos-white uppercase tracking-widest sm:tracking-[0.2em] leading-relaxed whitespace-nowrap">
+              ISO 9001:2015 Certified
+            </p>
+          </div>
+
+          <div className="flex justify-center items-center gap-2 sm:gap-3 px-6 py-3 sm:py-4 bg-white/5 backdrop-blur-md rounded-2xl md:rounded-full border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-red animate-pulse shrink-0" />
+            <p className="font-mono text-[9px] md:text-[11px] text-honos-white uppercase tracking-widest sm:tracking-[0.2em] leading-relaxed whitespace-nowrap">
+              PSARA Certified
             </p>
           </div>
         </motion.div>
