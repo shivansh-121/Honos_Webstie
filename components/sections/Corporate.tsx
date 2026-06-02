@@ -107,12 +107,9 @@ export function Corporate() {
                   <p className="font-display text-lg sm:text-xl md:text-2xl uppercase text-honos-white mb-1 sm:mb-2 group-hover:text-white transition-colors">
                     {d.name}
                   </p>
-                  <p className="font-mono text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-wider md:tracking-widest text-gold mb-3 sm:mb-4 flex flex-wrap items-center gap-x-2">
+                  <p className="font-mono text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-wider md:tracking-widest text-gold flex flex-wrap items-center gap-x-2">
                     <span>{d.role}</span> <span className="text-honos-muted hidden sm:inline">|</span> <span>DIN {d.din}</span>
                   </p>
-                  <div className="inline-block px-2 py-1 sm:px-3 bg-void/80 border border-honos-line/50 rounded-full font-mono text-[8px] sm:text-[9px] uppercase tracking-wider text-honos-muted">
-                    Appointed {d.appointed}
-                  </div>
                 </div>
               </motion.div>
             ))}

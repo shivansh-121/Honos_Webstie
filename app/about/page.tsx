@@ -81,10 +81,6 @@ export default function AboutPage() {
                     <dt className="inline text-honos-muted">DIN: </dt>
                     <dd className="inline text-honos-white">{d.din}</dd>
                   </div>
-                  <div>
-                    <dt className="inline text-honos-muted">Appointed: </dt>
-                    <dd className="inline text-honos-white">{d.appointed}</dd>
-                  </div>
                 </dl>
               </article>
             ))}
