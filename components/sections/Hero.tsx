@@ -119,7 +119,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20, x: -20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute left-2 sm:-left-6 md:-left-10 bottom-[28%] md:bottom-40 z-20 backdrop-blur-md bg-white/80 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2.5 sm:p-4 md:p-6 rounded-xl md:rounded-2xl"
+              className="absolute left-2 sm:-left-6 md:-left-10 bottom-[32%] md:bottom-40 z-20 backdrop-blur-md bg-white/80 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2.5 sm:p-4 md:p-6 rounded-xl md:rounded-2xl"
             >
               <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
                 <div className="flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-gold text-white">
@@ -139,7 +139,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20, x: 20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute right-2 sm:-right-6 md:-right-10 bottom-4 md:bottom-8 z-20 backdrop-blur-md bg-white/80 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2.5 sm:p-4 md:p-6 rounded-xl md:rounded-2xl"
+              className="absolute right-2 sm:-right-6 md:-right-10 bottom-20 md:bottom-8 z-20 backdrop-blur-md bg-white/80 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-2.5 sm:p-4 md:p-6 rounded-xl md:rounded-2xl"
             >
               <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
                 <div className="flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-brand-red text-white">
