@@ -12,7 +12,6 @@ import {
   terms,
   conclusion,
 } from '@/lib/company-data';
-import { ContactDetails } from '@/components/ui/ContactDetails';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -151,13 +150,6 @@ export default function AboutPage() {
               {p}
             </p>
           ))}
-        </section>
-
-        <section className="mt-8 border border-honos-line bg-obsidian p-8">
-          <h2 className="mb-8 font-display text-3xl uppercase text-honos-white">
-            Visit Us
-          </h2>
-          <ContactDetails />
         </section>
 
         <div className="mt-16 flex flex-wrap gap-6">

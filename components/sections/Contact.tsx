@@ -124,8 +124,6 @@ export function Contact() {
                 </Button>
               </form>
             )}
-          </div>
-
         </div>
       </div>
     </section>
