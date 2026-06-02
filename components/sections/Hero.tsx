@@ -101,7 +101,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20, rotate: 5 }}
               animate={{ opacity: 1, y: 0, rotate: 0 }}
               transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute -right-8 top-1/2 -translate-y-1/2 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 rounded-2xl"
+              className="absolute -right-8 top-20 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 rounded-2xl"
             >
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-navy text-white font-display text-xl font-bold">
@@ -119,7 +119,7 @@ export function Hero() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute left-1/2 -translate-x-1/2 -bottom-6 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
+              className="absolute -left-6 bottom-16 z-20 backdrop-blur-md bg-white/70 border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 md:p-6 rounded-2xl"
             >
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-brand-gold text-white">
