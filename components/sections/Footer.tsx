@@ -6,6 +6,7 @@ import { NavBrand } from '@/components/ui/NavBrand';
 const nav = [
   { href: '/services', label: 'Services' },
   { href: '/about', label: 'About' },
+  { href: '/careers', label: 'Careers' },
   { href: '/contact', label: 'Contact' },
 ];
 
