@@ -75,43 +75,45 @@ export function Process() {
           {supervision.items.join('; ')}.
         </p>
 
-        <div className="relative">
-          <svg
-            className="absolute left-0 right-0 top-6 hidden h-2 w-full md:block"
-            preserveAspectRatio="none"
-            viewBox="0 0 1000 4"
-          >
-            <line
-              ref={lineRef}
-              x1="0"
-              y1="2"
-              x2="1000"
-              y2="2"
-              stroke="#C9A84C"
-              strokeWidth="1"
-            />
-          </svg>
+        <div className="overflow-x-auto pb-8 -mx-6 px-6 lg:mx-0 lg:px-0 hide-scrollbar">
+          <div className="relative min-w-[800px] lg:min-w-0">
+            <svg
+              className="absolute left-0 right-0 top-6 h-2 w-full z-0"
+              preserveAspectRatio="none"
+              viewBox="0 0 1000 4"
+            >
+              <line
+                ref={lineRef}
+                x1="0"
+                y1="2"
+                x2="1000"
+                y2="2"
+                stroke="#C9A84C"
+                strokeWidth="2"
+              />
+            </svg>
 
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-5 md:gap-4">
-            {steps.map((step, i) => (
-              <div
-                key={step.num}
-                ref={(el) => {
-                  nodeRefs.current[i] = el;
-                }}
-                className="relative flex flex-col items-center text-center"
-              >
-                <div className="z-10 flex h-12 w-12 items-center justify-center rounded-full border border-gold bg-void font-mono text-xs text-gold">
-                  {step.num}
+            <div className="grid grid-cols-5 gap-4">
+              {steps.map((step, i) => (
+                <div
+                  key={step.num}
+                  ref={(el) => {
+                    nodeRefs.current[i] = el;
+                  }}
+                  className="relative flex flex-col items-center text-center px-2"
+                >
+                  <div className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-obsidian font-mono text-sm font-bold text-gold shadow-md">
+                    {step.num}
+                  </div>
+                  <p className="step-label mt-6 font-display text-base md:text-lg uppercase text-honos-white opacity-0 leading-tight">
+                    {step.title}
+                  </p>
+                  <p className="step-label mt-3 max-w-[150px] font-body text-xs md:text-sm text-honos-muted opacity-0">
+                    {step.detail}
+                  </p>
                 </div>
-                <p className="step-label mt-4 font-display text-lg uppercase text-honos-white opacity-0">
-                  {step.title}
-                </p>
-                <p className="step-label mt-2 max-w-[180px] font-body text-sm text-honos-muted opacity-0">
-                  {step.detail}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

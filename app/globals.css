@@ -145,6 +145,14 @@ body::after {
   }
 }
 
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .section-divider {
   height: 1px;
   background: linear-gradient(
