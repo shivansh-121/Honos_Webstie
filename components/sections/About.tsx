@@ -111,11 +111,11 @@ export function About() {
           <h2 className="mb-10 font-display text-4xl uppercase tracking-wider text-honos-white md:text-5xl">
             Why Choose Honos
           </h2>
-          <ul className="grid max-w-2xl w-full gap-6 sm:grid-cols-2 text-left">
+          <ul className="max-w-3xl w-full sm:columns-2 sm:gap-12 text-left mx-auto">
             {whyChooseUs.map((item) => (
               <li
                 key={item}
-                className="flex gap-3 font-body text-lg text-honos-white"
+                className="flex gap-3 font-body text-lg text-honos-white mb-8 break-inside-avoid"
               >
                 <span className="mt-1 shrink-0 text-gold" aria-hidden>
                   ✔
