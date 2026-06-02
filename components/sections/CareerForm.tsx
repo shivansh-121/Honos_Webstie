@@ -124,11 +124,9 @@ export function CareerForm() {
 
     const waUrl = `https://wa.me/${ADMIN_WHATSAPP}?text=${encodeURIComponent(waMessage)}`;
     
-    // Adding a slight delay to ensure PDF download starts before navigating away
-    setTimeout(() => {
-      window.open(waUrl, '_blank', 'noopener,noreferrer');
-      setSubmitted(true);
-    }, 500);
+    // Call window.open synchronously to prevent popup blockers
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
+    setSubmitted(true);
   };
 
   return (
