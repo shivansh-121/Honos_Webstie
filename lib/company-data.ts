@@ -106,27 +106,18 @@ export const whyChooseUs = [
 export const services = [
   {
     num: '01',
-    title: 'Security Personnel (Guards & Supervisors)',
+    title: 'Comprehensive Guarding & Protection Services',
     points: [
-      'Comprehensive site supervision and guard management',
-      'Access control, frisking, and protection of premises',
+      'Site supervision, access control, frisking, and premises protection',
       'Dedicated lady guards for female visitors and ladies\' areas',
-      'Emergency handling and crowd management',
-      'Maintenance of registers and disciplined operations',
+      'Deployment of trained and licensed armed personnel (Gunmen)',
+      'Physically fit bouncers and bodyguards for VIPs and corporate gatherings',
+      'Event security, crowd control, and emergency handling for all scales',
+      'Maintenance of registers and highly disciplined operations',
     ],
   },
   {
     num: '02',
-    title: 'Gunman (Armed Guard)',
-    points: [
-      'Deployment of trained and licensed armed personnel',
-      'Protection for high-risk areas and VIP security',
-      'Weapon handling as per legal compliance',
-      'Quick response in emergency situations',
-    ],
-  },
-  {
-    num: '03',
     title: 'Housekeeping Services',
     points: [
       'Cleaning and maintenance of premises',
@@ -136,7 +127,7 @@ export const services = [
     ],
   },
   {
-    num: '04',
+    num: '03',
     title: 'Manpower Outsourcing (All Categories)',
     points: [
       'Skilled, semi-skilled, and unskilled manpower',
@@ -148,28 +139,7 @@ export const services = [
     ],
   },
   {
-    num: '05',
-    title: 'Event Security',
-    points: [
-      'Handling small to large-scale events',
-      'Crowd control and VIP security',
-      'Entry and exit management',
-    ],
-  },
-  {
-    num: '06',
-    title: 'Bouncer / Bodyguard Services',
-    points: [
-      'Deployment of physically fit, trained, and experienced bouncers',
-      'Specialized in crowd control and conflict handling',
-      'Events & shows; clubs, lounges & parties; VIP protection; corporate gatherings',
-      'Handling aggressive behavior, emergency response, public dealing',
-      'Well-groomed, uniformed, and professionally trained personnel',
-      'Available for short-term and long-term deployment',
-    ],
-  },
-  {
-    num: '07',
+    num: '04',
     title: 'Facility Management',
     points: [
       'Comprehensive facility upkeep',
@@ -179,7 +149,7 @@ export const services = [
     ],
   },
   {
-    num: '08',
+    num: '05',
     title: 'Specialized Corporate Security',
     points: [
       'Executive protection',
@@ -189,7 +159,7 @@ export const services = [
     ],
   },
   {
-    num: '09',
+    num: '06',
     title: 'Technical & Maintenance Staff',
     points: [
       'Electricians and plumbers',
@@ -199,7 +169,7 @@ export const services = [
     ],
   },
   {
-    num: '10',
+    num: '07',
     title: 'Cash Management Services',
     points: [
       'Secure cash transit',
