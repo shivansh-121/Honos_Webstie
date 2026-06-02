@@ -50,12 +50,12 @@ export function Services() {
           residential, and government establishments across India.
         </p>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex flex-wrap justify-center gap-6">
           {services.map((s) => (
             <Link
               key={s.num}
               href="/services"
-              className="service-card group border-l border-gold bg-void/50 p-6 opacity-0 transition-all duration-400 hover:-translate-y-2 hover:border hover:border-gold hover:shadow-[0_0_30px_rgba(201,168,76,0.15)]"
+              className="service-card w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] group border-l border-gold bg-void/50 p-6 opacity-0 transition-all duration-400 hover:-translate-y-2 hover:border hover:border-gold hover:shadow-[0_0_30px_rgba(201,168,76,0.15)]"
               data-cursor="link"
             >
               <span className="font-mono text-sm text-gold">{s.num}</span>
