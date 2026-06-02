@@ -103,12 +103,12 @@ export function About() {
           </div>
         </article>
 
-        <article className="about-panel flex h-full w-screen shrink-0 flex-col justify-center px-8 lg:px-20">
-          <SectionLabel className="mb-6">02 / Why Choose Us</SectionLabel>
+        <article className="about-panel flex h-full w-screen shrink-0 flex-col items-center justify-center text-center px-8 lg:px-20">
+          <SectionLabel className="mb-6 justify-center">02 / Why Choose Us</SectionLabel>
           <h2 className="mb-10 font-display text-4xl uppercase tracking-wider text-honos-white md:text-5xl">
             Why Choose Honos
           </h2>
-          <ul className="grid max-w-2xl gap-4 sm:grid-cols-2">
+          <ul className="grid max-w-2xl w-full gap-6 sm:grid-cols-2 text-left">
             {whyChooseUs.map((item) => (
               <li
                 key={item}
