@@ -82,14 +82,14 @@ export function Industries() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid gap-3 sm:gap-4 md:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 max-w-7xl mx-auto"
+          className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 max-w-7xl mx-auto"
         >
           {industryCategories.map((cat, index) => (
             <motion.div 
               key={cat.name} 
               variants={cardVariants}
               whileHover={{ scale: 1.05, translateY: -5 }}
-              className="group relative border border-honos-line/40 bg-void/50 backdrop-blur-sm p-4 sm:p-6 md:p-8 flex items-center justify-center text-center overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_0_30px_rgba(201,168,76,0.15)] rounded-xl min-h-[100px] sm:min-h-[120px]"
+              className="group relative border border-honos-line/40 bg-void/50 backdrop-blur-sm p-4 sm:p-6 md:p-8 flex items-center justify-center text-center overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_0_30px_rgba(201,168,76,0.15)] rounded-xl min-h-[100px] sm:min-h-[120px] w-[calc(50%-0.375rem)] sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)] xl:w-[calc(20%-1.2rem)]"
             >
               {/* Animated gradient hover background */}
               <div className="absolute inset-0 bg-gradient-to-tr from-brand-red/0 via-brand-red/5 to-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

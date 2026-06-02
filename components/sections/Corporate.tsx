@@ -1,3 +1,5 @@
+"use client";
+
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { company, directors } from '@/lib/company-data';
 import { motion } from 'framer-motion';
