@@ -62,6 +62,9 @@ export function Statement() {
         {/* Top edge blend gradient to merge with the previous section (Services) */}
         <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-obsidian to-transparent z-20 pointer-events-none" />
         
+        {/* Bottom edge blend gradient to merge with the next section (Process) */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-obsidian to-transparent z-20 pointer-events-none" />
+        
         <SecurityBackdrop variant="section" />
         <div
           className="pointer-events-none absolute inset-0"
