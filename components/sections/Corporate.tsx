@@ -126,7 +126,7 @@ export function Corporate() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 px-4 sm:px-6 py-3 sm:py-4 bg-white/5 backdrop-blur-md rounded-2xl md:rounded-full border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.2)] text-center">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-brand-red animate-pulse shrink-0" />
             <p className="font-mono text-[8px] sm:text-[9px] md:text-[11px] text-honos-white uppercase tracking-wider sm:tracking-[0.2em] leading-relaxed">
-              ISO 9001:2015 Certified <span className="hidden sm:inline mx-1 sm:mx-2 text-gold">·</span><br className="sm:hidden" /> PSARA Certified <span className="hidden sm:inline mx-1 sm:mx-2 text-gold">·</span><br className="sm:hidden" /> {company.nicCode}
+              ISO 9001:2015 Certified <span className="hidden sm:inline mx-1 sm:mx-2 text-gold">·</span><br className="sm:hidden" /> PSARA Certified
             </p>
           </div>
         </motion.div>
