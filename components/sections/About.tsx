@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SectionLabel } from '@/components/ui/SectionLabel';
@@ -17,19 +17,22 @@ export function About() {
     const track = trackRef.current;
     if (!section || !track) return;
 
-    const totalWidth = track.scrollWidth - window.innerWidth;
-
     const ctx = gsap.context(() => {
-      gsap.to(track, {
-        x: () => -totalWidth,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: section,
-          pin: true,
-          scrub: 1,
-          end: () => `+=${totalWidth}`,
-          anticipatePin: 1,
-        },
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1024px)", () => {
+        gsap.to(track, {
+          x: () => -(track.scrollWidth - window.innerWidth),
+          ease: 'none',
+          scrollTrigger: {
+            trigger: section,
+            pin: true,
+            scrub: 1,
+            end: () => `+=${track.scrollWidth - window.innerWidth}`,
+            invalidateOnRefresh: true,
+            anticipatePin: 1,
+          },
+        });
       });
     }, section);
 
@@ -43,8 +46,8 @@ export function About() {
       className="relative overflow-hidden bg-void"
       aria-labelledby="about-heading"
     >
-      <div ref={trackRef} className="flex h-screen w-max items-stretch">
-        <article className="about-panel flex h-full w-screen shrink-0 flex-col lg:flex-row items-center justify-center gap-12 px-8 lg:px-20">
+      <div ref={trackRef} className="flex flex-col lg:flex-row lg:h-screen lg:w-max items-stretch">
+        <article className="about-panel flex lg:h-full w-full lg:w-screen shrink-0 flex-col lg:flex-row items-center justify-center gap-12 px-6 py-24 lg:py-0 lg:px-20">
           <div className="flex-1 max-w-3xl">
             <SectionLabel className="mb-6">01 / Company Profile</SectionLabel>
             <h2
@@ -103,7 +106,7 @@ export function About() {
           </div>
         </article>
 
-        <article className="about-panel flex h-full w-screen shrink-0 flex-col items-center justify-center text-center px-8 lg:px-20">
+        <article className="about-panel flex lg:h-full w-full lg:w-screen shrink-0 flex-col items-center justify-center text-center px-6 py-24 lg:py-0 lg:px-20">
           <SectionLabel className="mb-6 justify-center">02 / Why Choose Us</SectionLabel>
           <h2 className="mb-10 font-display text-4xl uppercase tracking-wider text-honos-white md:text-5xl">
             Why Choose Honos
@@ -122,8 +125,6 @@ export function About() {
             ))}
           </ul>
         </article>
-
-
       </div>
     </section>
   );
