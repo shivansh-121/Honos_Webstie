@@ -323,8 +323,8 @@ export const industryCategories = [
     clients: ['Iconic Road, Magdalla', 'Dindoli Flower Garden, Dindoli'],
   },
   {
-    name: 'Saree Showroom',
-    clients: ['Vivera Saree Showroom, Varachha', 'Sambhav Silk Saree, Bhagal'],
+    name: 'Retail Stores & Showrooms',
+    clients: ['Luxury Retail Stores', 'Apparel & Saree Showrooms', 'Jewelry Boutiques'],
   },
   {
     name: 'Central Government / PSU',
@@ -361,7 +361,7 @@ export const industryCategories = [
     ],
   },
   {
-    name: 'Heavy Manufacturing Plants',
+    name: 'Manufacturing Plants',
     clients: [
       'Automotive Plants',
       'Steel & Metal Works',
