@@ -368,6 +368,26 @@ export const industryCategories = [
       'Textile Mills',
     ],
   },
+  {
+    name: 'Warehouses & Logistics Parks',
+    clients: ['E-commerce Fulfillment Centers', 'Cold Storage Facilities', 'Transport & Distribution Hubs'],
+  },
+  {
+    name: 'Banks & Financial Institutions',
+    clients: ['Nationalized Banks', 'Private Sector Banks', 'NBFCs & Financial Centers'],
+  },
+  {
+    name: 'IT Parks & Business Centers',
+    clients: ['Software Tech Parks', 'Corporate IT Campuses', 'Co-working Spaces'],
+  },
+  {
+    name: 'Events, Exhibitions & Trade Shows',
+    clients: ['Corporate Conferences', 'Public Exhibitions', 'Entertainment Concerts'],
+  },
+  {
+    name: 'Power Plants & Utility Facilities',
+    clients: ['Thermal Power Stations', 'Solar Parks', 'Water Treatment Facilities'],
+  },
 ];
 
 export const terms = [
